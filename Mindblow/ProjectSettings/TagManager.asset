@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SUELO
+  - Enemigo
+  - Vida
+  - Fons_Vida
+  - Vida20
+  - Vida30
+  - Vida40
+  - Vida50
+  - Vida60
+  - Vida70
+  - Vida80
+  - Vida90
+  - Vida100
+  - Espada
+  - Square
+  - Elemento Nocivo
+  - Elemento Nocivo 2
+  - Player_Bullet
+  - Player_Sword
+  - Enemigo 2
+  - Enemigo 3
+  - Enemigo 4
+  - Enemigo 5
+  - Enemy Ball
+  - Enemigo 6
+  - Enemy Ball 2
+  - Enemigo 7
+  - Undefined
+  - Enemy Ball 3
+  - Trampolin
+  - Curs Navet
+  - Rebotante 1
+  - Rebotante 2
+  - Rebotante 3
+  - Rebotante 4
+  - Rebotante 5
+  - Rebotante 6
+  - Rebotante 7
+  - Puerta Llave
+  - Llave
+  - Puerta Llave2
+  - escalera
+  - Enemigo 8
+  - Enemigo 10
+  - Enemigo 11
+  - Enemigo 12
+  - Enemigo 13
+  - Enemigo 14
+  - Enemigo 9
+  - Enemigo 15
+  - Enemy Ball 4
+  - Enemy Ball 5
+  - Llave2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
