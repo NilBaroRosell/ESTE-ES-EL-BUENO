@@ -57,6 +57,37 @@ TagManager:
   - Enemy Ball 4
   - Enemy Ball 5
   - Llave2
+  - Puerta Llave 3
+  - Puerta Llave 4
+  - Llave 3
+  - Palanca
+  - Palanca 2
+  - Palanca 3
+  - Palanca 4
+  - Palanca 5
+  - Palanca 6
+  - Palanca7
+  - Palanca 8
+  - Palanca 9
+  - Pinchos 2
+  - Pinchos 3
+  - Pinchos 4
+  - Pinchos 5
+  - Pinchos 6
+  - Pinchos 7
+  - Pinchos 8
+  - Pinchos 9
+  - Pared 1
+  - Pared 2
+  - Pared 3
+  - Pared 4
+  - Pared 5
+  - Pared 6
+  - Pared 7
+  - Pared 8
+  - Pared 9
+  - Pinchos 1
+  - Trampilla
   layers:
   - Default
   - TransparentFX
