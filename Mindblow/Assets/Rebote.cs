@@ -22,7 +22,7 @@ public class Rebote : MonoBehaviour {
         pepe.velocity = new Vector2(pepe.velocity.x, bolaSpeed);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         pepe.velocity = new Vector2(pepe.velocity.x, bolaSpeed);
     }

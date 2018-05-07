@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-        if (col.gameObject.tag == "Enemigo" || col.gameObject.tag == "Enemigo 2" || col.gameObject.tag == "Enemigo 3" || col.gameObject.tag == "Enemigo 4" || col.gameObject.tag == "Enemigo 5" || col.gameObject.tag == "Enemigo 6" || col.gameObject.tag == "Enemigo 7" || col.gameObject.tag == "Elemento Nocivo" || col.gameObject.tag == "Elemento Nocivo 2") //|| col.tag == "OtroEnemigo")
+        if (col.gameObject.tag == "Enemigo" || col.gameObject.tag == "Enemigo 2" || col.gameObject.tag == "Enemigo 3" || col.gameObject.tag == "Enemigo 4" || col.gameObject.tag == "Enemigo 5" || col.gameObject.tag == "Enemigo 6" || col.gameObject.tag == "Enemigo 7" || col.gameObject.tag == "Elemento Nocivo" || col.gameObject.tag == "Elemento Nocivo 2" || col.gameObject.tag == "Pinchos 1" || col.gameObject.tag == "Pinchos 2" || col.gameObject.tag == "Pinchos 3" || col.gameObject.tag == "Pinchos 4" || col.gameObject.tag == "Pinchos 5" || col.gameObject.tag == "Pinchos 6" || col.gameObject.tag == "Pinchos 7" || col.gameObject.tag == "Pinchos 8" || col.gameObject.tag == "Pinchos 9") //|| col.tag == "OtroEnemigo")
         {
             player.velocity = new Vector2(-25, 25);
         }
