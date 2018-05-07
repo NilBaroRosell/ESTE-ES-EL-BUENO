@@ -7034,7 +7034,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538762597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 135.1, y: -59, z: 0}
+  m_LocalPosition: {x: 30.5, y: -7.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7057,8 +7057,6 @@ MonoBehaviour:
   jugador: {fileID: 538762597}
   transformJugador: {fileID: 538762599}
   Llave: {fileID: 965168560}
-  camara: {fileID: 0}
-  transformCamara: {fileID: 0}
 --- !u!50 &538762601
 Rigidbody2D:
   serializedVersion: 4
@@ -13230,7 +13228,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007400054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 170.507, y: 8.444, z: 0}
+  m_LocalPosition: {x: 171.06, y: 8.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15541,9 +15539,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198280745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d394d01d0659142a513a773bb20bf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 556725da5984b194593969e12d17a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  focusAreaSize: {x: 10, y: 6}
+  player: {fileID: 538762597}
 --- !u!1 &1198462308
 GameObject:
   m_ObjectHideFlags: 0

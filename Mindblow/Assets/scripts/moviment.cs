@@ -9,22 +9,18 @@ public class moviment : MonoBehaviour
     public GameObject jugador;
     public Transform transformJugador;
     public GameObject Llave;
-    public GameObject camara;
-    public Transform transformCamara;
 
     private void Awake()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
         transformJugador = jugador.transform;
         Llave = GameObject.FindGameObjectWithTag("Llave");
-        camara = GameObject.FindGameObjectWithTag("MainCamera");
-        transformCamara = camara.transform;
     }
 
     // Use this for initialization
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
@@ -53,14 +49,6 @@ public class moviment : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1800));
             tocandoElSuelo = false;
             tocandoEscalera = false;
-        }
-
-        if (tocandoElSuelo) transformCamara.localPosition = new Vector3(transformJugador.localPosition.x, transformJugador.localPosition.y + (float)3.67, transformCamara.localPosition.z);
-        else
-        {
-            if (transformJugador.localPosition.y < transformCamara.localPosition.y + 3.5) transformCamara.localPosition = new Vector3(transformJugador.localPosition.x, transformCamara.localPosition.y, transformCamara.localPosition.z);
-            else transformCamara.localPosition = new Vector3(transformJugador.localPosition.x, transformJugador.localPosition.y + (float)3.67, transformCamara.localPosition.z);
-
         }
     }
 
