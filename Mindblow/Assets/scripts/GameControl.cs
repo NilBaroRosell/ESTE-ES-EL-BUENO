@@ -5,23 +5,17 @@ using UnityEngine;
 public class GameControl : MonoBehaviour
 {
 
-    public bool llave = false, habitacio1 = false, luz = false;
+    public bool llave = false, llaveEspecial1 = false, llaveEspecial2 = false, habitacio1 = false, luz = false;
     public GameObject jugador;
     public Transform transformJugador;
-    public GameObject Llave;
-    public GameObject Llave2;
-    public GameObject Llave3;
-    public GameObject Llave4;
+    public GameObject Llave, Llave2, Llave3, Llave4, Llave5, Llave6, Llave7;
     public GameObject Luz;
     public GameObject Trampilla;
-    public GameObject puertaLlave;
-    public GameObject puertaLlave2;
-    public GameObject puertaLlave3;
-    public GameObject puertaLlave4;
+    public GameObject puertaLlave, puertaLlave2, puertaLlave3, puertaLlave4, puertaLlave5, puertaLlave6, puertaLlave7;
     public float lastPosX, lastPosY;
-    public float xProva1, yProva1, xProva2, yProva2, nivel2X, nivel2Y, xProva3, yProva3, xProva4, yProva4, xProva5, yProva5;
-    public float xPos1, yPos1, xPos2, yPos2, xPos3, yPos3, xPos4, yPos4, xPos5, yPos5, xPos6, yPos6, xPos7, yPos7, xPos8, yPos8, xPos9, yPos9, xPos10, yPos10, xPos11, yPos11, xPos12, yPos12, xPos13, yPos13, xPos14, yPos14, xPos15, yPos15, xPos16, yPos16, xPos17, yPos17, xPos18, yPos18, xPos19, yPos19, xPos20, yPos20, xPos21, yPos21, xPos22, yPos22;
-    public float x1PL1, y1PL1, x2PL1, y2PL1, x1PL2, y1PL2, x2PL2, y2PL2, x1PL3, y1PL3, x2PL3, y2PL3, x1PL4, y1PL4, x2PL4, y2PL4;
+    public float xProva1, yProva1, xProva2, yProva2, nivel2X, nivel2Y, xProva3, yProva3, xProva4, yProva4, xProva5, yProva5, nivel3X, nivel3Y;
+    public float xPos1, yPos1, xPos2, yPos2, xPos3, yPos3, xPos4, yPos4, xPos5, yPos5, xPos6, yPos6, xPos7, yPos7, xPos8, yPos8, xPos9, yPos9, xPos10, yPos10, xPos11, yPos11, xPos12, yPos12, xPos13, yPos13, xPos14, yPos14, xPos15, yPos15, xPos16, yPos16, xPos17, yPos17, xPos18, yPos18, xPos19, yPos19, xPos20, yPos20, xPos21, yPos21, xPos22, yPos22, xPos23, yPos23, xPos24, yPos24;
+    public float x1PL1, y1PL1, x2PL1, y2PL1, x1PL2, y1PL2, x2PL2, y2PL2, x1PL3, y1PL3, x2PL3, y2PL3, x1PL4, y1PL4, x2PL4, y2PL4, x1PL5, y1PL5, x2PL5, y2PL5, x1PL6, y1PL6, x2PL6, y2PL6, x1PL7, y1PL7, x2PL7, y2PL7;
     public float tx1, tx2, ty1, ty2;
 
     private void Awake()
@@ -32,11 +26,17 @@ public class GameControl : MonoBehaviour
         Llave2 = GameObject.FindGameObjectWithTag("Llave2");
         Llave3 = GameObject.FindGameObjectWithTag("Llave 3");
         Llave4 = GameObject.FindGameObjectWithTag("Llave 4");
+        Llave5 = GameObject.FindGameObjectWithTag("Llave 5");
+        Llave6 = GameObject.FindGameObjectWithTag("Llave 6");
+        Llave7 = GameObject.FindGameObjectWithTag("Llave 7");
         Luz = GameObject.FindGameObjectWithTag("Luz");
         puertaLlave = GameObject.FindGameObjectWithTag("Puerta Llave");
         puertaLlave2 = GameObject.FindGameObjectWithTag("Puerta Llave2");
         puertaLlave3 = GameObject.FindGameObjectWithTag("Puerta Llave 3");
         puertaLlave4 = GameObject.FindGameObjectWithTag("Puerta Llave 4");
+        puertaLlave5 = GameObject.FindGameObjectWithTag("Puerta Llave 5");
+        puertaLlave6 = GameObject.FindGameObjectWithTag("Puerta Llave 6");
+        puertaLlave7 = GameObject.FindGameObjectWithTag("Puerta Llave 7");
         Trampilla = GameObject.FindGameObjectWithTag("Trampilla");
     }
 
@@ -82,8 +82,23 @@ public class GameControl : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Llave 4")
         {
-            llave = true;
+            llaveEspecial1 = true;
             Destroy(Llave4);
+        }
+        else if (collision.gameObject.tag == "Llave 5")
+        {
+            llave = true;
+            Destroy(Llave5);
+        }
+        else if (collision.gameObject.tag == "Llave 6")
+        {
+            llaveEspecial1 = true;
+            Destroy(Llave6);
+        }
+        else if (collision.gameObject.tag == "Llave 7")
+        {
+            llaveEspecial2 = true;
+            Destroy(Llave7);
         }
         else if (collision.gameObject.tag == "Luz")
         {
@@ -152,6 +167,7 @@ public class GameControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos21 && transformJugador.localPosition.x <= xPos22) && (transformJugador.localPosition.y >= yPos21 && transformJugador.localPosition.y <= yPos22)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
 
+        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos23 && transformJugador.localPosition.x <= xPos24) && (transformJugador.localPosition.y >= yPos23 && transformJugador.localPosition.y <= yPos24)) transformJugador.localPosition = new Vector2(nivel3X, nivel3Y + 5);
     }
     
     void checkKeyDoor()
@@ -185,10 +201,37 @@ public class GameControl : MonoBehaviour
 
         if ((transformJugador.localPosition.x >= x1PL4 && transformJugador.localPosition.x <= x2PL4) && (transformJugador.localPosition.y >= y1PL4 && transformJugador.localPosition.y <= y2PL4))
         {
-            if (llave && Input.GetKey(KeyCode.E))
+            if (llaveEspecial1 && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave4);
+                llaveEspecial1 = false;
+            }
+        }
+
+        if ((transformJugador.localPosition.x >= x1PL5 && transformJugador.localPosition.x <= x2PL5) && (transformJugador.localPosition.y >= y1PL5 && transformJugador.localPosition.y <= y2PL5))
+        {
+            if (llave && Input.GetKey(KeyCode.E))
+            {
+                Destroy(puertaLlave5);
                 llave = false;
+            }
+        }
+
+        if ((transformJugador.localPosition.x >= x1PL6 && transformJugador.localPosition.x <= x2PL6) && (transformJugador.localPosition.y >= y1PL6 && transformJugador.localPosition.y <= y2PL6))
+        {
+            if (llaveEspecial1 && Input.GetKey(KeyCode.E))
+            {
+                Destroy(puertaLlave6);
+                llaveEspecial1 = false;
+            }
+        }
+
+        if ((transformJugador.localPosition.x >= x1PL7 && transformJugador.localPosition.x <= x2PL7) && (transformJugador.localPosition.y >= y1PL7 && transformJugador.localPosition.y <= y2PL7))
+        {
+            if (llaveEspecial2 && Input.GetKey(KeyCode.E))
+            {
+                Destroy(puertaLlave7);
+                llaveEspecial2 = false;
             }
         }
     }

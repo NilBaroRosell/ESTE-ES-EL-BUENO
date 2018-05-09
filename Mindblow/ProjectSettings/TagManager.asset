@@ -90,6 +90,40 @@ TagManager:
   - Trampilla
   - Luz
   - Llave 4
+  - Area de Explosion
+  - Enemigo 3.1
+  - Mortero 1
+  - Enemigo 3.2
+  - Laser Pistol 2
+  - Enemigo 3.4
+  - Enemigo 3.3
+  - Laser Pistol 1
+  - Mortero 3
+  - Justice Flash
+  - 'Compas '
+  - Dibujante 3
+  - Lanzador de Esferas
+  - Enemy Ball 7
+  - Dibujante 5
+  - Boss 2
+  - Dibujante 4
+  - Dibujante 1
+  - Dibujante 2
+  - Compas 5
+  - Compas 1
+  - Compas 3
+  - Compas 7
+  - Compas 6
+  - Compas 2
+  - Compas 8
+  - Compas 4
+  - Enemy Ball 6
+  - Puerta Llave 5
+  - Puerta Llave 6
+  - Puerta Llave 7
+  - Llave 5
+  - Llave 6
+  - Llave 7
   layers:
   - Default
   - TransparentFX
