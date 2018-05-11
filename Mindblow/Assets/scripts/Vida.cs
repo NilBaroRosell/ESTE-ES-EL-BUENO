@@ -55,7 +55,6 @@ public class Vida : MonoBehaviour {
 
     public Image vida;
     public float numVida;
-    private int checkpoints;
 
     private void Awake()
     {
@@ -113,66 +112,14 @@ public class Vida : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        GameControl getVariables = GetComponent<GameControl>();
-        checkpoints = getVariables.checkPoint;
+
     }
 
     private void FixedUpdate()
     {
         if (numVida < 1)
         {
-            switch(checkpoints)
-            {
-                case 1:
-                    {
-                        transformJugador.localPosition = new Vector3(14, -14, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 2:
-                    {
-                        transformJugador.localPosition = new Vector3(18, (float)-24.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 3:
-                    {
-                        transformJugador.localPosition = new Vector3((float)162.24, (float)-8.56, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 4:
-                    {
-                        transformJugador.localPosition = new Vector3(233, (float)-6.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 5:
-                    {
-                        transformJugador.localPosition = new Vector3(183, (float)-6.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 6:
-                    {
-                        transformJugador.localPosition = new Vector3((float)405.3, (float)-11.93, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 7:
-                    {
-                        transformJugador.localPosition = new Vector3(457, -37, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 8:
-                    {
-                        transformJugador.localPosition = new Vector3(482, (float)-55.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 9:
-                    {
-                        transformJugador.localPosition = new Vector3(468, -68, transformJugador.localPosition.z);
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
+            SceneManager.LoadScene(sceneBuildIndex: 1);
         }
 
         if (((Mathf.Abs(transformJugador.localPosition.x - transformEnemigo.localPosition.x) <= 1.1 || Mathf.Abs(transformEnemigo.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo.localPosition.y) <= 1.1)) ||
