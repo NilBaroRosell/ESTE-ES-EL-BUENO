@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GameControl : MonoBehaviour
     public float xPos1, yPos1, xPos2, yPos2, xPos3, yPos3, xPos4, yPos4, xPos5, yPos5, xPos6, yPos6, xPos7, yPos7, xPos8, yPos8, xPos9, yPos9, xPos10, yPos10, xPos11, yPos11, xPos12, yPos12, xPos13, yPos13, xPos14, yPos14, xPos15, yPos15, xPos16, yPos16, xPos17, yPos17, xPos18, yPos18, xPos19, yPos19, xPos20, yPos20, xPos21, yPos21, xPos22, yPos22, xPos23, yPos23, xPos24, yPos24;
     public float x1PL1, y1PL1, x2PL1, y2PL1, x1PL2, y1PL2, x2PL2, y2PL2, x1PL3, y1PL3, x2PL3, y2PL3, x1PL4, y1PL4, x2PL4, y2PL4, x1PL5, y1PL5, x2PL5, y2PL5, x1PL6, y1PL6, x2PL6, y2PL6, x1PL7, y1PL7, x2PL7, y2PL7;
     public float tx1, tx2, ty1, ty2;
+    private float nVida;
 
     private void Awake()
     {
@@ -50,7 +52,140 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Vida getVariables = GetComponent<Vida>();
+        nVida = getVariables.numVida;
+        if (nVida < 1)
+        {
+            switch (checkPoint)
+            {
+                case 1:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        transformJugador.localPosition = new Vector3((float)15, (float)-14, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 2:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        transformJugador.localPosition = new Vector3(28, (float)-24.5, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 3:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        transformJugador.localPosition = new Vector3((float)162.24, (float)-8.56, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 4:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        Destroy(Llave3);
+                        Destroy(puertaLlave3);
+                        transformJugador.localPosition = new Vector3(233, (float)-6.5, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 5:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        Destroy(Llave3);
+                        Destroy(puertaLlave3);
+                        Destroy(Llave4);
+                        Destroy(puertaLlave4);
+                        transformJugador.localPosition = new Vector3(183, (float)-6.5, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 6:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        Destroy(Llave3);
+                        Destroy(puertaLlave3);
+                        Destroy(Llave4);
+                        Destroy(puertaLlave4);
+                        transformJugador.localPosition = new Vector3((float)405.3, (float)-11.93, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 7:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        Destroy(Llave3);
+                        Destroy(puertaLlave3);
+                        Destroy(Llave4);
+                        Destroy(puertaLlave4);
+                        Destroy(Llave5);
+                        Destroy(puertaLlave5);
+                        transformJugador.localPosition = new Vector3(457, -37, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 8:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        Destroy(Llave3);
+                        Destroy(puertaLlave3);
+                        Destroy(Llave4);
+                        Destroy(puertaLlave4);
+                        Destroy(Llave5);
+                        Destroy(puertaLlave5);
+                        Destroy(Llave6);
+                        Destroy(puertaLlave6);
+                        transformJugador.localPosition = new Vector3(428, (float)-55.5, transformJugador.localPosition.z);
+                        break;
+                    }
+                case 9:
+                    {
+                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        Destroy(Llave);
+                        Destroy(puertaLlave);
+                        Destroy(Llave2);
+                        Destroy(puertaLlave2);
+                        Destroy(Llave3);
+                        Destroy(puertaLlave3);
+                        Destroy(Llave4);
+                        Destroy(puertaLlave4);
+                        Destroy(Llave5);
+                        Destroy(puertaLlave5);
+                        Destroy(Llave6);
+                        Destroy(puertaLlave6);
+                        Destroy(Llave7);
+                        Destroy(puertaLlave7);
+                        transformJugador.localPosition = new Vector3 (468, -68, transformJugador.localPosition.z);
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -226,7 +361,7 @@ public class GameControl : MonoBehaviour
             if (llave && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave5);
-                checkPoint = 6;
+                checkPoint = 7;
                 llave = false;
             }
         }

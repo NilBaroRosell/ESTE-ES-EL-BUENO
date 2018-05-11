@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour {
 
@@ -117,10 +116,6 @@ public class Vida : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (numVida < 1)
-        {
-            SceneManager.LoadScene(sceneBuildIndex: 1);
-        }
 
         if (((Mathf.Abs(transformJugador.localPosition.x - transformEnemigo.localPosition.x) <= 1.1 || Mathf.Abs(transformEnemigo.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo.localPosition.y) <= 1.1)) ||
            ((Mathf.Abs(transformEnemigo2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo2.localPosition.y) <= 1.1)) ||
