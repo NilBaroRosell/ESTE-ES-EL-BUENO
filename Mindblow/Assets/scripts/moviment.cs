@@ -5,7 +5,8 @@ using UnityEngine;
 public class moviment : MonoBehaviour
 {
     public bool tocandoElSuelo = true, tocandoEscalera = false;
-    public bool llave;
+    private bool espacio = false;
+    private bool llave;
     public GameObject jugador;
     public Transform transformJugador;
     public GameObject Llave;
@@ -28,6 +29,14 @@ public class moviment : MonoBehaviour
     {
         GameControl getVariables = GetComponent<GameControl>();
         llave = getVariables.llave;
+
+        while (!espacio)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                espacio = true;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -44,11 +53,12 @@ public class moviment : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(new Vector2(60, 0));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && (tocandoElSuelo || tocandoEscalera)) // saltar
+        if (espacio && (tocandoElSuelo || tocandoEscalera)) // saltar
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1800));
+            espacio = false;
             tocandoElSuelo = false;
-            tocandoEscalera = false;
+            tocandoEscalera = false;            
         }
     }
 

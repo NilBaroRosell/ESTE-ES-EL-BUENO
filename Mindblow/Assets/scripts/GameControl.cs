@@ -6,6 +6,7 @@ public class GameControl : MonoBehaviour
 {
 
     public bool llave = false, llaveEspecial1 = false, llaveEspecial2 = false, habitacio1 = false, luz = false;
+    public int checkPoint = 0;
     public GameObject jugador;
     public Transform transformJugador;
     public GameObject Llave, Llave2, Llave3, Llave4, Llave5, Llave6, Llave7;
@@ -159,7 +160,11 @@ public class GameControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos7 && transformJugador.localPosition.x <= xPos8) && (transformJugador.localPosition.y >= yPos7 && transformJugador.localPosition.y <= yPos8)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
 
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos9 && transformJugador.localPosition.x <= xPos10) && (transformJugador.localPosition.y >= yPos9 && transformJugador.localPosition.y <= yPos10)) transformJugador.localPosition = new Vector2(nivel2X, nivel2Y + 5);
+        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos9 && transformJugador.localPosition.x <= xPos10) && (transformJugador.localPosition.y >= yPos9 && transformJugador.localPosition.y <= yPos10))
+        {
+            checkPoint = 3;
+            transformJugador.localPosition = new Vector2(nivel2X, nivel2Y + 5);
+        }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos13 && transformJugador.localPosition.x <= xPos14) && (transformJugador.localPosition.y >= yPos13 && transformJugador.localPosition.y <= yPos14)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
 
@@ -167,7 +172,11 @@ public class GameControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos21 && transformJugador.localPosition.x <= xPos22) && (transformJugador.localPosition.y >= yPos21 && transformJugador.localPosition.y <= yPos22)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
 
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos23 && transformJugador.localPosition.x <= xPos24) && (transformJugador.localPosition.y >= yPos23 && transformJugador.localPosition.y <= yPos24)) transformJugador.localPosition = new Vector2(nivel3X, nivel3Y + 5);
+        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos23 && transformJugador.localPosition.x <= xPos24) && (transformJugador.localPosition.y >= yPos23 && transformJugador.localPosition.y <= yPos24))
+        { 
+            checkPoint = 6;
+            transformJugador.localPosition = new Vector2(nivel3X, nivel3Y + 5);
+        }
     }
     
     void checkKeyDoor()
@@ -177,6 +186,7 @@ public class GameControl : MonoBehaviour
             if (llave && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave);
+                checkPoint = 1;
                 llave = false;
             }
         }
@@ -186,6 +196,7 @@ public class GameControl : MonoBehaviour
             if (llave && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave2);
+                checkPoint = 2;
                 llave = false;
             }
         }
@@ -195,6 +206,7 @@ public class GameControl : MonoBehaviour
             if (llave && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave3);
+                checkPoint = 4;
                 llave = false;
             }
         }
@@ -204,6 +216,7 @@ public class GameControl : MonoBehaviour
             if (llaveEspecial1 && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave4);
+                checkPoint = 5;
                 llaveEspecial1 = false;
             }
         }
@@ -213,6 +226,7 @@ public class GameControl : MonoBehaviour
             if (llave && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave5);
+                checkPoint = 6;
                 llave = false;
             }
         }
@@ -222,6 +236,7 @@ public class GameControl : MonoBehaviour
             if (llaveEspecial1 && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave6);
+                checkPoint = 8;
                 llaveEspecial1 = false;
             }
         }
@@ -231,6 +246,7 @@ public class GameControl : MonoBehaviour
             if (llaveEspecial2 && Input.GetKey(KeyCode.E))
             {
                 Destroy(puertaLlave7);
+                checkPoint = 9;
                 llaveEspecial2 = false;
             }
         }

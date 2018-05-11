@@ -124,6 +124,10 @@ TagManager:
   - Llave 5
   - Llave 6
   - Llave 7
+  - Enemigo 16
+  - Enemigo 17
+  - Enemigo 18
+  - Enemigo 19
   layers:
   - Default
   - TransparentFX
