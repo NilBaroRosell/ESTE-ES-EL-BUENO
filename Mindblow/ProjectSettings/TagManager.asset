@@ -128,6 +128,15 @@ TagManager:
   - Enemigo 17
   - Enemigo 18
   - Enemigo 19
+  - Obstaculos
+  - Rebotante 8
+  - Rebotante 9
+  - Rebotante 10
+  - Rebotante 11
+  - Rebotante 12
+  - Rebotante 13
+  - Rebotante 14
+  - Zona Laser
   layers:
   - Default
   - TransparentFX

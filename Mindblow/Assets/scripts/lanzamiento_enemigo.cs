@@ -45,8 +45,11 @@ public class lanzamiento_enemigo : MonoBehaviour {
             if (derecha)
             {
                 // camina derecha
-                Instantiate(FootPrefab, canon.position, canon.rotation);//*****
-                desiredTime = 0;
+                if (enemigo.tag != "Mortero 1" && enemigo.tag != "Mortero 3")
+                {
+                    Instantiate(FootPrefab, canon.position, canon.rotation);//*****
+                    desiredTime = 0;
+                }
             }
 
             else
@@ -77,8 +80,11 @@ public class lanzamiento_enemigo : MonoBehaviour {
             else
             {
                 // camina izquierda
-                Instantiate(FootPrefab, canon.position, canon.rotation);//*****
-                desiredTime = 0;
+                if (enemigo.tag != "Justice Flash")
+                {
+                    Instantiate(FootPrefab, canon.position, canon.rotation);//*****
+                    desiredTime = 0;
+                }
             }
         }
     }

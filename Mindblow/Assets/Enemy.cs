@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour {
 	private Transform lados;
 	public GameObject TeledirigidoPrefab;
 	Rigidbody2D enemy;
+    bool damage;
 
 	void Awake()
 	{
@@ -21,17 +22,12 @@ public class Enemy : MonoBehaviour {
 		NAVE = GameObject.FindGameObjectWithTag ("Player");
 		lados = NAVE.transform;
         health = 3;
+        damage = false;
     }
 
 	void Update()
 	{
-		//lados = NAVE.transform;
-		//counter = Time.deltaTime;
-
-		//if(counter % 2 == 0 && lados.transform.localPosition.x < 10)//La distancia x respecto al enemigo en un area movil
-		//{
-		//	Instantiate (TeledirigidoPrefab, Enemigo.position, Enemigo.rotation);
-		//}
+		
 	}
 
 	public void OnCollisionEnter2D(Collision2D col)
@@ -47,6 +43,19 @@ public class Enemy : MonoBehaviour {
                 Destroy(gameObject);
             }
 		}
+
+        if (col.gameObject.tag == "Jugador")
+        {
+            damage = true;
+        }
 	}
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Jugador")
+        {
+            damage = false;
+        }
+    }
 }
 

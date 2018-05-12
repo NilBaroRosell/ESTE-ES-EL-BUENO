@@ -9,40 +9,99 @@ public class PlayerManager : MonoBehaviour {
 
 	public Transform NAVE;
 
-
+    public float Vida;
 
 	// Use this for initialization
 	void Start () {
 		player = GetComponent<Rigidbody2D>();
+        Vida = 100;
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-
-		//if (NAVE.position.y <= 0)
-	//	{
-	//		NAVE.localPosition = new Vector3 (-3.66f, 1.59f, -1.0f);
-
-			// Hay que situar a todas las cosas en su posicion y estados predeterminados
-			// justo despues de pulsar el boton de reinicio.
-	//	}
-
-
-
-	}
+    }
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-        if (col.gameObject.tag == "Enemigo" || col.gameObject.tag == "Enemigo 2" || col.gameObject.tag == "Enemigo 3" || col.gameObject.tag == "Enemigo 4" || col.gameObject.tag == "Enemigo 5" || col.gameObject.tag == "Enemigo 6" || col.gameObject.tag == "Enemigo 7" || col.gameObject.tag == "Elemento Nocivo" || col.gameObject.tag == "Elemento Nocivo 2" || col.gameObject.tag == "Compas 1" || col.gameObject.tag == "Compas 2" || col.gameObject.tag == "Compas 3" || col.gameObject.tag == "Compas 4" || col.gameObject.tag == "Compas 5" || col.gameObject.tag == "Compas 6" || col.gameObject.tag == "Compas 7" || col.gameObject.tag == "Compas 8" || col.gameObject.tag == "Compas" || col.gameObject.tag == "Dibujante 1" || col.gameObject.tag == "Dibujante 2" || col.gameObject.tag == "Dibujante 3" || col.gameObject.tag == "Dibujante 4" || col.gameObject.tag == "Dibujante 5" || col.gameObject.tag == "Lanzador de Esferas" || col.gameObject.tag == "Justice Flash" || col.gameObject.tag == "Boss 2") //|| col.tag == "OtroEnemigo")
+        if (col.gameObject.tag == "Enemigo" ||
+            col.gameObject.tag == "Enemigo 2" ||
+            col.gameObject.tag == "Enemigo 3" ||
+            col.gameObject.tag == "Enemigo 4" ||
+            col.gameObject.tag == "Enemigo 5" ||
+            col.gameObject.tag == "Enemigo 6" ||
+            col.gameObject.tag == "Enemigo 7" ||
+            col.gameObject.tag == "Elemento Nocivo" ||
+            col.gameObject.tag == "Elemento Nocivo 2" ||
+            col.gameObject.tag == "Rebotante 1" ||
+            col.gameObject.tag == "Rebotante 2" ||
+            col.gameObject.tag == "Rebotante 3" ||
+            col.gameObject.tag == "Rebotante 4" ||
+            col.gameObject.tag == "Rebotante 5" ||
+            col.gameObject.tag == "Rebotante 6" ||
+            col.gameObject.tag == "Rebotante 7" ||
+
+            col.gameObject.tag == "Enemigo 8" ||
+            col.gameObject.tag == "Enemigo 9" ||
+            col.gameObject.tag == "Enemigo 10" ||
+            col.gameObject.tag == "Enemigo 11" ||
+            col.gameObject.tag == "Enemigo 12" ||
+            col.gameObject.tag == "Enemigo 13" ||
+            col.gameObject.tag == "Enemigo 14" ||
+            col.gameObject.tag == "Enemigo 15" ||
+
+
+            col.gameObject.tag == "Compas 1" ||
+            col.gameObject.tag == "Compas 2" ||
+            col.gameObject.tag == "Compas 3" ||
+            col.gameObject.tag == "Compas 4" ||
+            col.gameObject.tag == "Compas 5" ||
+            col.gameObject.tag == "Compas 6" ||
+            col.gameObject.tag == "Compas 7" ||
+            col.gameObject.tag == "Compas 8" ||
+            col.gameObject.tag == "Compas" ||
+            col.gameObject.tag == "Dibujante 1" ||
+            col.gameObject.tag == "Dibujante 2" ||
+            col.gameObject.tag == "Dibujante 3" ||
+            col.gameObject.tag == "Dibujante 4" ||
+            col.gameObject.tag == "Dibujante 5" ||
+            col.gameObject.tag == "Lanzador de Esferas" ||
+            col.gameObject.tag == "Justice Flash" ||
+            col.gameObject.tag == "Boss 2" ||
+
+            col.gameObject.tag == "Enemigo 16" ||
+            col.gameObject.tag == "Enemigo 17" ||
+            col.gameObject.tag == "Enemigo 18" ||
+            col.gameObject.tag == "Enemigo 19" ||
+
+            col.gameObject.tag == "Enemigo 3.1" ||
+            col.gameObject.tag == "Enemigo 3.2" ||
+            col.gameObject.tag == "Enemigo 3.3" ||
+            col.gameObject.tag == "Enemigo 3.4"||
+            col.gameObject.tag == "Mortero 1" ||
+            col.gameObject.tag == "Mortero 3" ||
+            col.gameObject.tag == "Laser Pistol 1" ||
+            col.gameObject.tag == "Laser Pistol 2" ||
+            col.gameObject.tag == "Zona Laser" ||
+            col.gameObject.tag == "Area de Explosion") //|| col.tag == "OtroEnemigo")
+        {
+            if (col.transform.localPosition.x < NAVE.localPosition.x)
+            {
+                player.velocity = new Vector2(25, 25);
+                Vida -= 2;
+            }
+
+            else
+            {
+                player.velocity = new Vector2(-25, 25);
+                Vida -= 2;
+            }
+        }
+
+        if (col.gameObject.tag == "Obstaculos") //|| col.tag == "OtroEnemigo")
         {
             player.velocity = new Vector2(-25, 25);
         }
-
-		if(col.gameObject.tag == "Area de Explosion") //|| col.tag == "OtroEnemigo")
-		{
-			player.velocity = new Vector2 (-25, 25);
-		}
 
         if (col.gameObject.tag == "Trampolin") //|| col.tag == "OtroEnemigo")
         {
@@ -51,16 +110,8 @@ public class PlayerManager : MonoBehaviour {
 
         if (col.gameObject.tag == "Curs Navet")
         {
-            SceneManager.LoadScene("prova", LoadSceneMode.Single);
+            NAVE.localPosition = new Vector3(7.8f, -2.8f, 0.0f);
         }
 
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Elemento Nocivo")
-        {
-            player.velocity = new Vector2(-25, 25);
-        }
     }
 }
