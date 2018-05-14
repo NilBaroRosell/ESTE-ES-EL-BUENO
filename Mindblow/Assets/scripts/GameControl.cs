@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
+    public Color inicial, apagonON;
+    public GameObject Player;
+    public Renderer apagon;
+    private PlayerManager getDamage;
 
     public bool llave = false, llaveEspecial1 = false, llaveEspecial2 = false, habitacio1 = false, luz = false;
     public int checkPoint = 0;
@@ -52,8 +56,8 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vida getVariables = GetComponent<Vida>();
-        nVida = getVariables.numVida;
+        getDamage = Player.GetComponent<PlayerManager>();
+        nVida = getDamage.Vida;
         if (nVida < 1)
         {
             switch (checkPoint)
@@ -192,7 +196,12 @@ public class GameControl : MonoBehaviour
     {
         if (luz)
         {
+            apagon.material.SetColor ("_Color", apagonON);
+        }
 
+        else
+        {
+            apagon.material.SetColor ("_Color", inicial);
         }
         checkDoor();
         checkKeyDoor();

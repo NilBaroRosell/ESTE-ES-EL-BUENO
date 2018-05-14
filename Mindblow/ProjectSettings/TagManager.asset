@@ -137,6 +137,14 @@ TagManager:
   - Rebotante 13
   - Rebotante 14
   - Zona Laser
+  - Goma1
+  - Goma2
+  - Goma3
+  - Goma4
+  - Goma5
+  - Goma6
+  - Goma7
+  - Goma8
   layers:
   - Default
   - TransparentFX
