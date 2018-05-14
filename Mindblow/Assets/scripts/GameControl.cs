@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-    public Color inicial, apagonON;
+    public Color apagonON, inicial;
     public GameObject Player;
     public Renderer apagon;
     private PlayerManager getDamage;
@@ -45,6 +45,7 @@ public class GameControl : MonoBehaviour
         puertaLlave6 = GameObject.FindGameObjectWithTag("Puerta Llave 6");
         puertaLlave7 = GameObject.FindGameObjectWithTag("Puerta Llave 7");
         Trampilla = GameObject.FindGameObjectWithTag("Trampilla");
+        apagon.material.SetColor("_Color", inicial);
     }
 
     // Use this for initialization
@@ -56,153 +57,21 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        getDamage = Player.GetComponent<PlayerManager>();
-        nVida = getDamage.Vida;
-        if (nVida < 1)
-        {
-            switch (checkPoint)
-            {
-                case 1:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        transformJugador.localPosition = new Vector3((float)15, (float)-14, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 2:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        transformJugador.localPosition = new Vector3(28, (float)-24.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 3:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        transformJugador.localPosition = new Vector3((float)162.24, (float)-8.56, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 4:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        Destroy(Llave3);
-                        Destroy(puertaLlave3);
-                        transformJugador.localPosition = new Vector3(233, (float)-6.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 5:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        Destroy(Llave3);
-                        Destroy(puertaLlave3);
-                        Destroy(Llave4);
-                        Destroy(puertaLlave4);
-                        transformJugador.localPosition = new Vector3(183, (float)-6.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 6:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        Destroy(Llave3);
-                        Destroy(puertaLlave3);
-                        Destroy(Llave4);
-                        Destroy(puertaLlave4);
-                        transformJugador.localPosition = new Vector3((float)405.3, (float)-11.93, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 7:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        Destroy(Llave3);
-                        Destroy(puertaLlave3);
-                        Destroy(Llave4);
-                        Destroy(puertaLlave4);
-                        Destroy(Llave5);
-                        Destroy(puertaLlave5);
-                        transformJugador.localPosition = new Vector3(457, -37, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 8:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        Destroy(Llave3);
-                        Destroy(puertaLlave3);
-                        Destroy(Llave4);
-                        Destroy(puertaLlave4);
-                        Destroy(Llave5);
-                        Destroy(puertaLlave5);
-                        Destroy(Llave6);
-                        Destroy(puertaLlave6);
-                        transformJugador.localPosition = new Vector3(428, (float)-55.5, transformJugador.localPosition.z);
-                        break;
-                    }
-                case 9:
-                    {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
-                        Destroy(Llave);
-                        Destroy(puertaLlave);
-                        Destroy(Llave2);
-                        Destroy(puertaLlave2);
-                        Destroy(Llave3);
-                        Destroy(puertaLlave3);
-                        Destroy(Llave4);
-                        Destroy(puertaLlave4);
-                        Destroy(Llave5);
-                        Destroy(puertaLlave5);
-                        Destroy(Llave6);
-                        Destroy(puertaLlave6);
-                        Destroy(Llave7);
-                        Destroy(puertaLlave7);
-                        transformJugador.localPosition = new Vector3 (468, -68, transformJugador.localPosition.z);
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
-        }
+        
     }
 
     private void FixedUpdate()
     {
         if (luz)
         {
-            apagon.material.SetColor ("_Color", apagonON);
+            apagon.material.SetColor("_Color", apagonON);
         }
 
         else
         {
-            apagon.material.SetColor ("_Color", inicial);
+            apagon.material.SetColor("_Color", inicial);
         }
+
         checkDoor();
         checkKeyDoor();
         checkTrampilla();

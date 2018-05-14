@@ -13291,6 +13291,7 @@ GameObject:
   - component: {fileID: 538762603}
   - component: {fileID: 538762605}
   - component: {fileID: 538762606}
+  - component: {fileID: 538762607}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Player
@@ -13346,7 +13347,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538762597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32, y: -1, z: 0}
+  m_LocalPosition: {x: 6.7, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13455,10 +13456,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f473f31a428a10f4fb14d1e3adb35767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inicial: {r: 0, g: 0, b: 0, a: 0}
-  apagonON: {r: 0, g: 0, b: 0, a: 0.8235294}
+  apagonON: {r: 0, g: 0, b: 0, a: 0}
+  inicial: {r: 0, g: 0, b: 0, a: 0.822}
   Player: {fileID: 538762597}
-  apagon: {fileID: 0}
+  apagon: {fileID: 1765496544}
   llave: 0
   llaveEspecial1: 0
   llaveEspecial2: 0
@@ -13659,6 +13660,55 @@ MonoBehaviour:
   yMin1: -59.28
   yMax2: -51.037
   yMin2: -55.15
+--- !u!114 &538762607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538762597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82bc568579a4d44ba142d6040ad1f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 538762597}
+  enemigo1: {fileID: 1656391947}
+  enemigo2: {fileID: 1942605033}
+  enemigo3: {fileID: 199395884}
+  enemigo4: {fileID: 1343641905}
+  enemigo5: {fileID: 1887521194}
+  enemigo6: {fileID: 1377040464}
+  enemigo7: {fileID: 69722952}
+  enemigo8: {fileID: 121595496}
+  enemigo9: {fileID: 1789465395}
+  enemigo10: {fileID: 1626601402}
+  enemigo11: {fileID: 912927660}
+  enemigo12: {fileID: 1332795745}
+  enemigo13: {fileID: 381677810}
+  enemigo14: {fileID: 1984740441}
+  enemigo15: {fileID: 751163646}
+  enemigo16: {fileID: 1432934259}
+  enemigo17: {fileID: 2038283619}
+  enemigo18: {fileID: 1834715306}
+  enemigo19: {fileID: 509692520}
+  enemigo20: {fileID: 677977681}
+  enemigo21: {fileID: 2115650659}
+  enemigo22: {fileID: 1484347459}
+  enemigo23: {fileID: 905741876}
+  enemigo24: {fileID: 1470148899}
+  enemigo25: {fileID: 1871073156}
+  enemigo26: {fileID: 1622858378}
+  enemigo27: {fileID: 1979539122}
+  enemigo28: {fileID: 2100467068}
+  enemigo29: {fileID: 960250365}
+  enemigo30: {fileID: 1352226578}
+  enemigo31: {fileID: 717309019}
+  enemigo32: {fileID: 2128012561}
+  enemigo33: {fileID: 1684868937}
+  enemigo34: {fileID: 1681897086}
+  enemigo35: {fileID: 1260563136}
+  camara: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!1 &538948790
 GameObject:
   m_ObjectHideFlags: 0
