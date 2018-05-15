@@ -11,6 +11,9 @@ public class Vida : MonoBehaviour {
     public Image vida;
     public float numVida;
 
+    private inicialitzar getCambio;
+    private bool change;
+
     private void Awake()
     {
 
@@ -23,6 +26,11 @@ public class Vida : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        getCambio = Player.GetComponent<inicialitzar>();
+        change = getCambio.cambio;
+
+        if (change) vida.fillAmount = 1;
+
         getDamage = Player.GetComponent<PlayerManager>();
         numVida = getDamage.Vida;
         vida.fillAmount = numVida / 100;

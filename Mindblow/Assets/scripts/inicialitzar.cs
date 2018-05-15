@@ -47,6 +47,7 @@ public class inicialitzar : MonoBehaviour {
     private GameControl getDamageGC;
     private float nVida;
     private int checkPoints;
+    public bool cambio = false;
 
     private void Awake()
     {
@@ -87,13 +88,16 @@ public class inicialitzar : MonoBehaviour {
         enemigo28 = GameObject.FindGameObjectWithTag("Enemigo 3.1");
         enemigo29 = GameObject.FindGameObjectWithTag("Laser Pistol 1");
         enemigo30 = GameObject.FindGameObjectWithTag("Laser Pistol 2");
+
         enemigo31 = GameObject.FindGameObjectWithTag("Enemigo 3.2");
+
         enemigo32 = GameObject.FindGameObjectWithTag("Enemigo 3.3");
         enemigo33 = GameObject.FindGameObjectWithTag("Enemigo 3.4");
         enemigo34 = GameObject.FindGameObjectWithTag("Mortero 3");
+
         enemigo35 = GameObject.FindGameObjectWithTag("Mortero 1");
 
-        camara = GameObject.FindGameObjectWithTag("Main Camara");
+        camara = GameObject.FindGameObjectWithTag("MainCamera");
 
         enemigo1.transform.localRotation = Quaternion.Euler(0, 0, 0);
         enemigo2.transform.localRotation = Quaternion.Euler(0, 0, 0);
@@ -155,8 +159,7 @@ public class inicialitzar : MonoBehaviour {
                 case 1:
                     {
                         jugador.transform.localPosition = new Vector3((float)15, (float)-14, jugador.transform.localPosition.z);
-                        //camara.transform.localPosition = new Vector3(jugador.transform.localPosition.x, jugador.transform.localPosition.y + (float)3.67, camara.transform.localPosition.z);
-
+                        
                         Destroy(enemigo1);
                         Instantiate(enemigo1, enemigo1.transform.localPosition, enemigo1.transform.localRotation);
                         Destroy(enemigo2);
@@ -178,61 +181,139 @@ public class inicialitzar : MonoBehaviour {
                         Destroy(enemigo10);
                         Instantiate(enemigo10, enemigo10.transform.localPosition, enemigo10.transform.localRotation);
 
+                        cambio = true;
+
                         break;
                     }
-                /*case 2:
+                case 2:
                     {
+                        jugador.transform.localPosition = new Vector3(28, (float)-24.5, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3(28, (float)-24.5, transformJugador.localPosition.z);
+                        Destroy(enemigo11);
+                        Instantiate(enemigo11, enemigo11.transform.localPosition, enemigo11.transform.localRotation);
+                        Destroy(enemigo12);
+                        Instantiate(enemigo12, enemigo12.transform.localPosition, enemigo12.transform.localRotation);
+                        Destroy(enemigo13);
+                        Instantiate(enemigo13, enemigo13.transform.localPosition, enemigo13.transform.localRotation);
+                        Destroy(enemigo14);
+                        Instantiate(enemigo14, enemigo14.transform.localPosition, enemigo14.transform.localRotation);
+                        Destroy(enemigo15);
+                        Instantiate(enemigo15, enemigo15.transform.localPosition, enemigo15.transform.localRotation);
+
+                        cambio = true;
+
                         break;
                     }
                 case 3:
                     {
+                        jugador.transform.localPosition = new Vector3((float)162.24, (float)-8.56, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3((float)162.24, (float)-8.56, transformJugador.localPosition.z);
+                        Destroy(enemigo16);
+                        Instantiate(enemigo16, enemigo16.transform.localPosition, enemigo16.transform.localRotation);
+                        Destroy(enemigo17);
+                        Instantiate(enemigo17, enemigo17.transform.localPosition, enemigo17.transform.localRotation);
+
+                        cambio = true;
+
                         break;
                     }
                 case 4:
                     {
+                        jugador.transform.localPosition = new Vector3(233, (float)-6.5, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3(233, (float)-6.5, transformJugador.localPosition.z);
+                        Destroy(enemigo18);
+                        Instantiate(enemigo18, enemigo18.transform.localPosition, enemigo18.transform.localRotation);
+                        Destroy(enemigo19);
+                        Instantiate(enemigo19, enemigo19.transform.localPosition, enemigo19.transform.localRotation);
+                        Destroy(enemigo20);
+                        Instantiate(enemigo20, enemigo20.transform.localPosition, enemigo20.transform.localRotation);
+                        Destroy(enemigo21);
+                        Instantiate(enemigo21, enemigo21.transform.localPosition, enemigo21.transform.localRotation);
+                        Destroy(enemigo22);
+                        Instantiate(enemigo22, enemigo22.transform.localPosition, enemigo22.transform.localRotation);
+                        Destroy(enemigo23);
+                        Instantiate(enemigo23, enemigo23.transform.localPosition, enemigo23.transform.localRotation);
+                        Destroy(enemigo24);
+                        Instantiate(enemigo24, enemigo24.transform.localPosition, enemigo24.transform.localRotation);
+                        Destroy(enemigo25);
+                        Instantiate(enemigo25, enemigo25.transform.localPosition, enemigo25.transform.localRotation);
+                        Destroy(enemigo26);
+                        Instantiate(enemigo26, enemigo26.transform.localPosition, enemigo26.transform.localRotation);
+
+                        cambio = true;
+
                         break;
                     }
                 case 5:
                     {
+                        jugador.transform.localPosition = new Vector3(183, (float)-6.5, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3(183, (float)-6.5, transformJugador.localPosition.z);
+                        Destroy(enemigo27);
+                        Instantiate(enemigo27, enemigo27.transform.localPosition, enemigo27.transform.localRotation);
+
+                        cambio = true;
+
                         break;
                     }
                 case 6:
                     {
+                        jugador.transform.localPosition = new Vector3((float)405.3, (float)-11.93, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3((float)405.3, (float)-11.93, transformJugador.localPosition.z);
+                        Destroy(enemigo28);
+                        Instantiate(enemigo28, enemigo28.transform.localPosition, enemigo28.transform.localRotation);
+                        Destroy(enemigo29);
+                        Instantiate(enemigo29, enemigo29.transform.localPosition, enemigo29.transform.localRotation);
+                        Destroy(enemigo30);
+                        Instantiate(enemigo30, enemigo30.transform.localPosition, enemigo30.transform.localRotation);
+
+                        cambio = true;
+
                         break;
                     }
                 case 7:
                     {
+                        jugador.transform.localPosition = new Vector3(457, -37, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3(457, -37, transformJugador.localPosition.z);
+                        Destroy(enemigo31);
+                        Instantiate(enemigo31, enemigo31.transform.localPosition, enemigo31.transform.localRotation);
+
+                        cambio = true;
+
                         break;
                     }
                 case 8:
                     {
+                        jugador.transform.localPosition = new Vector3(428, (float)-55.5, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3(428, (float)-55.5, transformJugador.localPosition.z);
+                        Destroy(enemigo32);
+                        Instantiate(enemigo32, enemigo32.transform.localPosition, enemigo32.transform.localRotation);
+                        Destroy(enemigo33);
+                        Instantiate(enemigo33, enemigo33.transform.localPosition, enemigo33.transform.localRotation);
+                        Destroy(enemigo34);
+                        Instantiate(enemigo34, enemigo34.transform.localPosition, enemigo34.transform.localRotation);
+
+                        cambio = true;
+
                         break;
                     }
                 case 9:
                     {
+                        jugador.transform.localPosition = new Vector3(468, -68, jugador.transform.localPosition.z);
 
-                        transformJugador.localPosition = new Vector3(468, -68, transformJugador.localPosition.z);
+                        Destroy(enemigo35);
+                        Instantiate(enemigo35, enemigo35.transform.localPosition, enemigo35.transform.localRotation);
+
+                        cambio = true;
+
                         break;
-                    }*/
+                    }
                 default:
                     {
                         break;
                     }
             }
         }
+
+        else cambio = false;
     }
 }

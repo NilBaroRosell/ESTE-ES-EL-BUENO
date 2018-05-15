@@ -7,12 +7,16 @@ public class seguimientoCamara : MonoBehaviour {
     public Vector2 focusAreaSize;
     public GameObject player;
 
+    private inicialitzar getCambio;
+    public bool change = false;
+
     focusArea FocusArea;
 
     float playerCenterX, playerCenterY;
 
     int x = 0;
     float l = 0, r = 0, u = 0, d = 0;
+
 
     struct focusArea
     {

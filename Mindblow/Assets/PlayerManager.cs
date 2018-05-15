@@ -11,15 +11,23 @@ public class PlayerManager : MonoBehaviour {
 
     public float Vida;
 
-	// Use this for initialization
-	void Start () {
+    private inicialitzar getCambio;
+    public GameObject Player;
+    public bool change = false;
+
+    // Use this for initialization
+    void Start () {
+        Player = GameObject.FindGameObjectWithTag("Player");
 		player = GetComponent<Rigidbody2D>();
         Vida = 100;
 	}
 
 	// Update is called once per frame
 	void Update () {
+        getCambio = Player.GetComponent<inicialitzar>();
+        change = getCambio.cambio;
 
+        if (change) Vida = 100;
     }
 
 	void OnCollisionEnter2D(Collision2D col)

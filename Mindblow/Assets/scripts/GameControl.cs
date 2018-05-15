@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-    public Color apagonON, inicial;
     public GameObject Player;
     public Renderer apagon;
     private PlayerManager getDamage;
@@ -23,7 +22,7 @@ public class GameControl : MonoBehaviour
     public float xPos1, yPos1, xPos2, yPos2, xPos3, yPos3, xPos4, yPos4, xPos5, yPos5, xPos6, yPos6, xPos7, yPos7, xPos8, yPos8, xPos9, yPos9, xPos10, yPos10, xPos11, yPos11, xPos12, yPos12, xPos13, yPos13, xPos14, yPos14, xPos15, yPos15, xPos16, yPos16, xPos17, yPos17, xPos18, yPos18, xPos19, yPos19, xPos20, yPos20, xPos21, yPos21, xPos22, yPos22, xPos23, yPos23, xPos24, yPos24;
     public float x1PL1, y1PL1, x2PL1, y2PL1, x1PL2, y1PL2, x2PL2, y2PL2, x1PL3, y1PL3, x2PL3, y2PL3, x1PL4, y1PL4, x2PL4, y2PL4, x1PL5, y1PL5, x2PL5, y2PL5, x1PL6, y1PL6, x2PL6, y2PL6, x1PL7, y1PL7, x2PL7, y2PL7;
     public float tx1, tx2, ty1, ty2;
-    private float nVida;
+    public float lx1, lx2, ly1, ly2;
 
     private void Awake()
     {
@@ -45,7 +44,6 @@ public class GameControl : MonoBehaviour
         puertaLlave6 = GameObject.FindGameObjectWithTag("Puerta Llave 6");
         puertaLlave7 = GameObject.FindGameObjectWithTag("Puerta Llave 7");
         Trampilla = GameObject.FindGameObjectWithTag("Trampilla");
-        apagon.material.SetColor("_Color", inicial);
     }
 
     // Use this for initialization
@@ -62,6 +60,8 @@ public class GameControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        checkLuz();
+
         if (luz)
         {
             Destroy(apagon);
@@ -263,6 +263,11 @@ public class GameControl : MonoBehaviour
     void checkTrampilla()
     {
         if ((transformJugador.localPosition.x >= tx1 && transformJugador.localPosition.x <= tx2) && (transformJugador.localPosition.y >= ty1 && transformJugador.localPosition.y <= ty2)) transformJugador.localPosition = new Vector3(transformJugador.localPosition.x, transformJugador.localPosition.y + (float)22.3, transformJugador.localPosition.z);
+    }
+
+    void checkLuz()
+    {
+        if (((transformJugador.localPosition.x >= lx1 && transformJugador.localPosition.x <= lx2) && (transformJugador.localPosition.y >= ly1 && transformJugador.localPosition.y <= ly2)) && Input.GetKey(KeyCode.E)) luz = true;
     }
 }
 

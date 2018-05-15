@@ -13288,10 +13288,10 @@ GameObject:
   - component: {fileID: 538762601}
   - component: {fileID: 538762600}
   - component: {fileID: 538762604}
-  - component: {fileID: 538762603}
   - component: {fileID: 538762605}
   - component: {fileID: 538762606}
   - component: {fileID: 538762607}
+  - component: {fileID: 538762603}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Player
@@ -13347,7 +13347,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538762597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 167.7, y: 12.8, z: 0}
+  m_LocalPosition: {x: 162.5, y: -17.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13368,7 +13368,6 @@ MonoBehaviour:
   tocandoEscalera: 0
   jugador: {fileID: 538762597}
   transformJugador: {fileID: 538762599}
-  Llave: {fileID: 0}
 --- !u!50 &538762601
 Rigidbody2D:
   serializedVersion: 4
@@ -13427,6 +13426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NAVE: {fileID: 538762599}
   Vida: 0
+  Player: {fileID: 0}
+  change: 0
 --- !u!114 &538762604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13456,8 +13457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f473f31a428a10f4fb14d1e3adb35767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apagonON: {r: 0, g: 0, b: 0, a: 0}
-  inicial: {r: 0, g: 0, b: 0, a: 0.822}
   Player: {fileID: 538762597}
   apagon: {fileID: 1765496544}
   llave: 0
@@ -13580,6 +13579,10 @@ MonoBehaviour:
   tx2: 163.54
   ty1: -29.36
   ty2: -28.31
+  lx1: 258.18
+  lx2: 260.21
+  ly1: -98.65
+  ly2: -98.57
 --- !u!114 &538762606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13709,6 +13712,7 @@ MonoBehaviour:
   enemigo35: {fileID: 1260563136}
   camara: {fileID: 0}
   Player: {fileID: 538762597}
+  cambio: 0
 --- !u!1 &538948790
 GameObject:
   m_ObjectHideFlags: 0
@@ -23721,7 +23725,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 912927660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.89, y: -24.53, z: 0}
+  m_LocalPosition: {x: 23.4, y: -25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30840,6 +30844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focusAreaSize: {x: 1, y: 6}
   player: {fileID: 538762597}
+  change: 0
 --- !u!1 &1198462308
 GameObject:
   m_ObjectHideFlags: 0

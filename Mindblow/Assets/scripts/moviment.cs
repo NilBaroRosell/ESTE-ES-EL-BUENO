@@ -9,13 +9,11 @@ public class moviment : MonoBehaviour
     private bool llave;
     public GameObject jugador;
     public Transform transformJugador;
-    public GameObject Llave;
 
     private void Awake()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
         transformJugador = jugador.transform;
-        Llave = GameObject.FindGameObjectWithTag("Llave");
     }
 
     // Use this for initialization
@@ -27,9 +25,6 @@ public class moviment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameControl getVariables = GetComponent<GameControl>();
-        llave = getVariables.llave;
-
         if (!espacio)
         {
             if (Input.GetKeyDown(KeyCode.Space))
