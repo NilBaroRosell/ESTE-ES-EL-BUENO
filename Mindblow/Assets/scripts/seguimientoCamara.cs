@@ -86,10 +86,10 @@ public class seguimientoCamara : MonoBehaviour {
         playerCenterX = player.transform.localPosition.x;
         playerCenterY = player.transform.localPosition.y;
 
-        l = FocusArea.left;
-        r = FocusArea.right;
         d = FocusArea.down;
         u = FocusArea.up;
+        l = FocusArea.left;
+        r = FocusArea.right;
 
         FocusArea = new focusArea(playerCenterX, playerCenterY, x, l, r, d, u, focusAreaSize);
 

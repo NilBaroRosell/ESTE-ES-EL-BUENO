@@ -5403,6 +5403,7 @@ MonoBehaviour:
   Enemigo: {fileID: 199395890}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &199395887
 Rigidbody2D:
   serializedVersion: 4
@@ -10226,6 +10227,7 @@ MonoBehaviour:
   Enemigo: {fileID: 381677816}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &381677813
 Rigidbody2D:
   serializedVersion: 4
@@ -10309,7 +10311,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381677810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.07, y: 6.879999, z: 0}
+  m_LocalPosition: {x: 3.07, y: 6.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12682,7 +12684,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509692520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 230.82162, y: -6.439006, z: 0}
+  m_LocalPosition: {x: 230.82, y: -6.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12728,6 +12730,7 @@ MonoBehaviour:
   Enemigo: {fileID: 509692521}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &509692524
 Rigidbody2D:
   serializedVersion: 4
@@ -13347,7 +13350,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538762597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 162.5, y: -17.2, z: 0}
+  m_LocalPosition: {x: 10.3, y: -3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17040,6 +17043,7 @@ MonoBehaviour:
   Enemigo: {fileID: 677977687}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &677977684
 Rigidbody2D:
   serializedVersion: 4
@@ -17127,7 +17131,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677977681}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 198, y: -20.639017, z: 0}
+  m_LocalPosition: {x: 198, y: -20.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18785,6 +18789,7 @@ MonoBehaviour:
   Enemigo: {fileID: 717309020}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &717309023
 Rigidbody2D:
   serializedVersion: 4
@@ -19340,7 +19345,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4419654953028246, guid: a2e596e3c49eb3041b27a5aada5574d7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.539999
+      value: 6.54
       objectReference: {fileID: 0}
     - target: {fileID: 4419654953028246, guid: a2e596e3c49eb3041b27a5aada5574d7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -19395,6 +19400,26 @@ Prefab:
       propertyPath: m_Name
       value: Enemigo nvl 1 6 boss
       objectReference: {fileID: 0}
+    - target: {fileID: 114432916775647950, guid: a2e596e3c49eb3041b27a5aada5574d7,
+        type: 2}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432916775647950, guid: a2e596e3c49eb3041b27a5aada5574d7,
+        type: 2}
+      propertyPath: xInicial
+      value: -35.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432916775647950, guid: a2e596e3c49eb3041b27a5aada5574d7,
+        type: 2}
+      propertyPath: yInicial
+      value: 6.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432916775647950, guid: a2e596e3c49eb3041b27a5aada5574d7,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 538762597}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2e596e3c49eb3041b27a5aada5574d7, type: 2}
   m_IsPrefabParent: 0
@@ -19585,6 +19610,7 @@ MonoBehaviour:
   Enemigo: {fileID: 751163652}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &751163649
 Rigidbody2D:
   serializedVersion: 4
@@ -19672,7 +19698,7 @@ Transform:
   m_PrefabInternal: {fileID: 736505664}
   m_GameObject: {fileID: 751163646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.05, y: 6.539999, z: 0}
+  m_LocalPosition: {x: -35.05, y: 6.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24809,6 +24835,7 @@ MonoBehaviour:
   Enemigo: {fileID: 960250371}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &960250368
 Rigidbody2D:
   serializedVersion: 4
@@ -24896,7 +24923,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960250365}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 531.60175, y: -15.353912, z: 0}
+  m_LocalPosition: {x: 531.6, y: -15.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32163,6 +32190,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1260563142}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1260563139
 Rigidbody2D:
   serializedVersion: 4
@@ -32250,7 +32278,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1260563136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 502.60175, y: 4.866089, z: 0}
+  m_LocalPosition: {x: 502.6, y: 4.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -33484,6 +33512,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1332795751}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1332795748
 Rigidbody2D:
   serializedVersion: 4
@@ -34367,6 +34396,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1352226584}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1352226581
 Rigidbody2D:
   serializedVersion: 4
@@ -34454,7 +34484,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352226578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 519.60175, y: -7.333911, z: 0}
+  m_LocalPosition: {x: 519.6, y: -7.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -36371,6 +36401,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1432934265}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1432934262
 Rigidbody2D:
   serializedVersion: 4
@@ -37463,6 +37494,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1484347465}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1484347462
 Rigidbody2D:
   serializedVersion: 4
@@ -40874,6 +40906,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1626601408}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1626601405
 Rigidbody2D:
   serializedVersion: 4
@@ -42260,6 +42293,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1656391951}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!1 &1656976959
 GameObject:
   m_ObjectHideFlags: 0
@@ -42543,6 +42577,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1681897092}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1681897089
 Rigidbody2D:
   serializedVersion: 4
@@ -42630,7 +42665,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1681897086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 502.60175, y: 13.796089, z: 0}
+  m_LocalPosition: {x: 502.6, y: 13.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42665,7 +42700,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1684868937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 523.10175, y: -65.13391, z: 0}
+  m_LocalPosition: {x: 523.1, y: -65.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42708,6 +42743,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1684868938}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1684868941
 Rigidbody2D:
   serializedVersion: 4
@@ -46499,6 +46535,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1834715312}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1834715309
 Rigidbody2D:
   serializedVersion: 4
@@ -49526,6 +49563,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1942605039}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1942605036
 Rigidbody2D:
   serializedVersion: 4
@@ -50660,6 +50698,7 @@ MonoBehaviour:
   Enemigo: {fileID: 1984740447}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &1984740444
 Rigidbody2D:
   serializedVersion: 4
@@ -52172,6 +52211,7 @@ MonoBehaviour:
   Enemigo: {fileID: 2038283625}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &2038283622
 Rigidbody2D:
   serializedVersion: 4
@@ -53985,6 +54025,7 @@ MonoBehaviour:
   Enemigo: {fileID: 2100467069}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &2100467072
 Rigidbody2D:
   serializedVersion: 4
@@ -54513,6 +54554,7 @@ MonoBehaviour:
   Enemigo: {fileID: 2115650665}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &2115650662
 Rigidbody2D:
   serializedVersion: 4
@@ -54931,7 +54973,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2128012561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 521.8418, y: -65.13391, z: 0}
+  m_LocalPosition: {x: 521.84, y: -65.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54974,6 +55016,7 @@ MonoBehaviour:
   Enemigo: {fileID: 2128012562}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
 --- !u!50 &2128012565
 Rigidbody2D:
   serializedVersion: 4

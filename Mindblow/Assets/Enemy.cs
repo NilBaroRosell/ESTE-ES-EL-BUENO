@@ -4,15 +4,18 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     float health;
-
-	public Transform Enemigo;
-	public GameObject NAVE;
-	private Transform lados;
-	public GameObject TeledirigidoPrefab;
-	Rigidbody2D enemy;
+    public Transform Enemigo;
+    public GameObject NAVE;
+    public GameObject TeledirigidoPrefab;
+    private Transform lados;
+    Rigidbody2D enemy;
     bool damage;
 
-	void Awake()
+    public GameObject Player;
+    private inicialitzar getCambio;
+    private bool change;
+
+    void Awake()
 	{
 		enemy = GetComponent<Rigidbody2D>();
 	}
@@ -27,8 +30,11 @@ public class Enemy : MonoBehaviour {
 
 	void Update()
 	{
-		
-	}
+        getCambio = Player.GetComponent<inicialitzar>();
+        change = getCambio.cambio;
+
+        if (change) health = 3;
+    }
 
 	public void OnCollisionEnter2D(Collision2D col)
 	{
