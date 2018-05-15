@@ -64,12 +64,7 @@ public class GameControl : MonoBehaviour
     {
         if (luz)
         {
-            apagon.material.SetColor("_Color", apagonON);
-        }
-
-        else
-        {
-            apagon.material.SetColor("_Color", inicial);
+            Destroy(apagon);
         }
 
         checkDoor();
