@@ -12,6 +12,11 @@ public class Enemy_Inmortal : MonoBehaviour {
     public GameObject TeledirigidoPrefab;
     Rigidbody2D enemy;
 
+    public GameObject Player;
+    private inicialitzar getCambio;
+    private bool change;
+    public float xIni, yIni;
+
     void Awake()
     {
         enemy = GetComponent<Rigidbody2D>();
@@ -26,13 +31,14 @@ public class Enemy_Inmortal : MonoBehaviour {
 
     void Update()
     {
-        //lados = NAVE.transform;
-        //counter = Time.deltaTime;
+        getCambio = Player.GetComponent<inicialitzar>();
+        change = getCambio.cambio;
 
-        //if(counter % 2 == 0 && lados.transform.localPosition.x < 10)//La distancia x respecto al enemigo en un area movil
-        //{
-        //	Instantiate (TeledirigidoPrefab, Enemigo.position, Enemigo.rotation);
-        //}
+        if (change)
+        {
+            Enemigo.transform.localPosition = new Vector2(xIni, yIni);
+            health = 99;
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D col)
@@ -45,7 +51,7 @@ public class Enemy_Inmortal : MonoBehaviour {
             }
             else
             {
-                Destroy(gameObject);
+                Enemigo.transform.localPosition = new Vector2(-877, -5);
             }
         }
     }

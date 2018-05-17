@@ -18,6 +18,8 @@ public class Enemy_Boss : MonoBehaviour {
 
     public float newPos;
 
+    public float xIni, yIni;
+
     void Awake()
     {
         enemy = GetComponent<Rigidbody2D>();
@@ -37,7 +39,11 @@ public class Enemy_Boss : MonoBehaviour {
         getCambio = Player.GetComponent<inicialitzar>();
         change = getCambio.cambio;
 
-        if (change) health = 18;
+        if (change)
+        {
+            Enemigo.transform.localPosition = new Vector2(xIni, yIni);
+            health = 18;
+        }
 
         getCambio = Player.GetComponent<inicialitzar>();
         change = getCambio.cambio;
@@ -60,7 +66,7 @@ public class Enemy_Boss : MonoBehaviour {
             }
             else
             {
-                Destroy(gameObject);
+                Enemigo.transform.localPosition = new Vector2(-877, -5);
             }
         }
 

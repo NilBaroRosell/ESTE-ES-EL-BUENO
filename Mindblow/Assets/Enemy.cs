@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour {
     bool paso1_2;
     bool paso2_3;
 
+    public float xIni, yIni;
+
     void Awake()
 	{
 		enemy = GetComponent<Rigidbody2D>();
@@ -35,7 +37,11 @@ public class Enemy : MonoBehaviour {
         getCambio = Player.GetComponent<inicialitzar>();
         change = getCambio.cambio;
 
-        if (change) health = 3;
+        if (change)
+        {
+            Enemigo.transform.localPosition = new Vector2(xIni, yIni);
+            health = 3;
+        }
     }
 
 	public void OnCollisionEnter2D(Collision2D col)
@@ -48,7 +54,7 @@ public class Enemy : MonoBehaviour {
             }
             else
             {
-                Destroy(gameObject);
+                Enemigo.transform.localPosition = new Vector2(-877, -5);
             }
 		}
 

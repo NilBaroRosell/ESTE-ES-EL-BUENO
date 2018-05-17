@@ -1852,6 +1852,9 @@ MonoBehaviour:
   Enemigo: {fileID: 69722958}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 63.05
+  yIni: -127.28
 --- !u!114 &69722954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3000,6 +3003,9 @@ MonoBehaviour:
   Enemigo: {fileID: 121595502}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 77.3
+  yIni: -127.2
 --- !u!114 &121595498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5622,6 +5628,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: -49.01
+  yIni: -121.07
 --- !u!50 &199395887
 Rigidbody2D:
   serializedVersion: 4
@@ -10564,6 +10572,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 3.07
+  yIni: 6.88
 --- !u!50 &381677813
 Rigidbody2D:
   serializedVersion: 4
@@ -12926,6 +12936,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 230.82
+  yIni: -6.44
 --- !u!50 &509692524
 Rigidbody2D:
   serializedVersion: 4
@@ -13545,7 +13557,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538762597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 432.74, y: -85.66, z: 0}
+  m_LocalPosition: {x: 6.62, y: -3.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17639,6 +17651,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 198
+  yIni: -20.64
 --- !u!50 &677977684
 Rigidbody2D:
   serializedVersion: 4
@@ -19385,6 +19399,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 421.2
+  yIni: -50
 --- !u!50 &717309023
 Rigidbody2D:
   serializedVersion: 4
@@ -19464,6 +19480,60 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1 &722310537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 722310539}
+  - component: {fileID: 722310538}
+  m_Layer: 0
+  m_Name: GameObject (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &722310538
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722310537}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 4.662689, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.325378, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &722310539
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722310537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -881.55316, y: -8.037903, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 410
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726854031
 GameObject:
   m_ObjectHideFlags: 0
@@ -20015,6 +20085,16 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 538762597}
+    - target: {fileID: 114432916775647950, guid: a2e596e3c49eb3041b27a5aada5574d7,
+        type: 2}
+      propertyPath: xIni
+      value: -35.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432916775647950, guid: a2e596e3c49eb3041b27a5aada5574d7,
+        type: 2}
+      propertyPath: yIni
+      value: 6.54
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2e596e3c49eb3041b27a5aada5574d7, type: 2}
   m_IsPrefabParent: 0
@@ -20206,6 +20286,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: -35.05
+  yIni: 6.54
 --- !u!50 &751163649
 Rigidbody2D:
   serializedVersion: 4
@@ -20678,6 +20760,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 520.45
+  yIni: -74.56
 --- !u!50 &760043942
 Rigidbody2D:
   serializedVersion: 4
@@ -24497,6 +24581,9 @@ MonoBehaviour:
   Enemigo: {fileID: 905741882}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 216.66
+  yIni: -137.18
 --- !u!50 &905741879
 Rigidbody2D:
   serializedVersion: 4
@@ -24667,6 +24754,9 @@ MonoBehaviour:
   Enemigo: {fileID: 912927663}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 0}
+  xIni: 23.4
+  yIni: -25
 --- !u!212 &912927662
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25800,6 +25890,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 531.6
+  yIni: -15.35
 --- !u!50 &960250368
 Rigidbody2D:
   serializedVersion: 4
@@ -31339,6 +31431,8 @@ MonoBehaviour:
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
   newPos: 0
+  xIni: 423.19
+  yIni: -85.26
 --- !u!50 &1170773063
 Rigidbody2D:
   serializedVersion: 4
@@ -32903,6 +32997,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1213903861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1213903863}
+  - component: {fileID: 1213903862}
+  m_Layer: 0
+  m_Name: GameObject (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1213903862
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1213903861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 9.260345, y: 1.9819932}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.9639864}
+  m_EdgeRadius: 0
+--- !u!4 &1213903863
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1213903861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -881.55316, y: -8.037903, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 412
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1221894871
 Prefab:
   m_ObjectHideFlags: 0
@@ -33708,6 +33856,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 502.6
+  yIni: 4.87
 --- !u!50 &1260563139
 Rigidbody2D:
   serializedVersion: 4
@@ -35030,6 +35180,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 26.5
+  yIni: 7.1
 --- !u!50 &1332795748
 Rigidbody2D:
   serializedVersion: 4
@@ -35399,6 +35551,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1343641911}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: -48.9
+  yIni: -126.4
 --- !u!114 &1343641907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36014,6 +36169,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 519.6
+  yIni: -7.33
 --- !u!50 &1352226581
 Rigidbody2D:
   serializedVersion: 4
@@ -36437,6 +36594,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1377040470}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 42.69
+  yIni: -127.07
 --- !u!114 &1377040466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36541,7 +36701,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1377040464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.689995, y: -127.07, z: 0}
+  m_LocalPosition: {x: 42.69, y: -127.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38019,6 +38179,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 184.3
+  yIni: 9.2
 --- !u!50 &1432934262
 Rigidbody2D:
   serializedVersion: 4
@@ -38772,6 +38934,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1470148905}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 230.99
+  yIni: -137.27
 --- !u!50 &1470148902
 Rigidbody2D:
   serializedVersion: 4
@@ -39112,6 +39277,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 168.8
+  yIni: -6.6
 --- !u!50 &1484347462
 Rigidbody2D:
   serializedVersion: 4
@@ -42376,6 +42543,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1622858384}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 259.9
+  yIni: -133.58
 --- !u!50 &1622858381
 Rigidbody2D:
   serializedVersion: 4
@@ -42524,6 +42694,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 88.88
+  yIni: -121.24
 --- !u!50 &1626601405
 Rigidbody2D:
   serializedVersion: 4
@@ -43911,6 +44083,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 2.3
+  yIni: -12.6
 --- !u!1 &1656976959
 GameObject:
   m_ObjectHideFlags: 0
@@ -44195,6 +44369,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 502.6
+  yIni: 13.8
 --- !u!50 &1681897089
 Rigidbody2D:
   serializedVersion: 4
@@ -44361,6 +44537,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 523.1
+  yIni: -65.13
 --- !u!50 &1684868941
 Rigidbody2D:
   serializedVersion: 4
@@ -46583,6 +46761,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1789465401}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 98.4
+  yIni: -127.1
 --- !u!114 &1789465397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47420,6 +47601,60 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1 &1819416581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1819416583}
+  - component: {fileID: 1819416582}
+  m_Layer: 0
+  m_Name: GameObject (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1819416582
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819416581}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2.5993352}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6.1986704}
+  m_EdgeRadius: 0
+--- !u!4 &1819416583
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819416581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -881.55316, y: -8.037903, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 411
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1819918322
 GameObject:
   m_ObjectHideFlags: 0
@@ -48353,6 +48588,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 226.7
+  yIni: -6.3
 --- !u!50 &1834715309
 Rigidbody2D:
   serializedVersion: 4
@@ -48743,6 +48980,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1871073162}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: 247.58
+  yIni: -133.56
 --- !u!50 &1871073159
 Rigidbody2D:
   serializedVersion: 4
@@ -49261,6 +49501,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1887521200}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 538762597}
+  xIni: -14.8
+  yIni: -126.8
 --- !u!114 &1887521196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51522,6 +51765,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: -25
+  yIni: -11.5
 --- !u!50 &1942605036
 Rigidbody2D:
   serializedVersion: 4
@@ -52388,6 +52633,9 @@ MonoBehaviour:
   Enemigo: {fileID: 1979539127}
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
+  Player: {fileID: 0}
+  xIni: 164.1
+  yIni: -19.24
 --- !u!50 &1979539124
 Rigidbody2D:
   serializedVersion: 4
@@ -52475,7 +52723,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1979539122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 164.1, y: -19.238993, z: 0}
+  m_LocalPosition: {x: 164.1, y: -19.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52757,6 +53005,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: -25
+  yIni: 11.5
 --- !u!50 &1984740444
 Rigidbody2D:
   serializedVersion: 4
@@ -54270,6 +54520,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 228.1
+  yIni: 9.6
 --- !u!50 &2038283622
 Rigidbody2D:
   serializedVersion: 4
@@ -56184,6 +56436,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 444.45
+  yIni: -5.45
 --- !u!50 &2100467072
 Rigidbody2D:
   serializedVersion: 4
@@ -56713,6 +56967,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 167.4
+  yIni: -6.6
 --- !u!50 &2115650662
 Rigidbody2D:
   serializedVersion: 4
@@ -57175,6 +57431,8 @@ MonoBehaviour:
   NAVE: {fileID: 538762597}
   TeledirigidoPrefab: {fileID: 0}
   Player: {fileID: 538762597}
+  xIni: 521.84
+  yIni: -65.13
 --- !u!50 &2128012565
 Rigidbody2D:
   serializedVersion: 4

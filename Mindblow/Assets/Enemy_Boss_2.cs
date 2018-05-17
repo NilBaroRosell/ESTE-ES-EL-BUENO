@@ -12,6 +12,11 @@ public class Enemy_Boss_2 : MonoBehaviour {
     public GameObject TeledirigidoPrefab;
     Rigidbody2D enemy;
 
+    public GameObject Player;
+    private inicialitzar getCambio;
+    private bool change;
+    public float xIni, yIni;
+
     void Awake()
     {
         enemy = GetComponent<Rigidbody2D>();
@@ -26,7 +31,14 @@ public class Enemy_Boss_2 : MonoBehaviour {
 
     void Update()
     {
-        
+        getCambio = Player.GetComponent<inicialitzar>();
+        change = getCambio.cambio;
+
+        if (change)
+        {
+            Enemigo.transform.localPosition = new Vector2(xIni, yIni);
+            health = 10;
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D col)
@@ -39,7 +51,7 @@ public class Enemy_Boss_2 : MonoBehaviour {
             }
             else
             {
-                Destroy(gameObject);
+                Enemigo.transform.localPosition = new Vector2(-877, -5);
             }
         }
     }
