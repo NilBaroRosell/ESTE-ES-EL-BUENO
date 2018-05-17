@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour {
     public GameObject Player;
     private inicialitzar getCambio;
     private bool change;
+    bool paso1_2;
+    bool paso2_3;
 
     void Awake()
 	{

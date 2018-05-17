@@ -158,7 +158,7 @@ public class inicialitzar : MonoBehaviour {
                     }
                 case 1:
                     {
-                        jugador.transform.localPosition = new Vector3((float)15, (float)-14, jugador.transform.localPosition.z);
+                        jugador.transform.localPosition = new Vector3((float)15, (float)-5, jugador.transform.localPosition.z);
                         
                         Destroy(enemigo1);
                         Instantiate(enemigo1, enemigo1.transform.localPosition, enemigo1.transform.localRotation);

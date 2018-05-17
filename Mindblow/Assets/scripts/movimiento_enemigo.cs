@@ -12,6 +12,7 @@ public class movimiento_enemigo : MonoBehaviour {
     public bool derecha, siguiendo;
     public float minX, maxX, distancia;
 
+
     private void Awake()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
@@ -28,8 +29,8 @@ public class movimiento_enemigo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+    }
 
 
     private void FixedUpdate()
@@ -58,7 +59,7 @@ public class movimiento_enemigo : MonoBehaviour {
 
         else
         {
-            if ((transformJugador.localPosition.x - transformEnemigo.localPosition.x <= distancia && transformJugador.localPosition.x - transformEnemigo.localPosition.x >= 0) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo.localPosition.y) <= 10))
+            if ((transformJugador.localPosition.x - transformEnemigo.localPosition.x <= distancia && transformJugador.localPosition.x - transformEnemigo.localPosition.x >= 0) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo.localPosition.y) <= 4))
             {
                 if (derecha)
                 {
@@ -77,7 +78,7 @@ public class movimiento_enemigo : MonoBehaviour {
                 }
             }
 
-            else if (transformEnemigo.localPosition.x - transformJugador.localPosition.x <= distancia && transformEnemigo.localPosition.x - transformJugador.localPosition.x >= 0 && (Mathf.Abs(transformEnemigo.localPosition.y - transformJugador.localPosition.y)) <= 10)
+            else if (transformEnemigo.localPosition.x - transformJugador.localPosition.x <= distancia && transformEnemigo.localPosition.x - transformJugador.localPosition.x >= 0 && (Mathf.Abs(transformEnemigo.localPosition.y - transformJugador.localPosition.y)) <= 4)
             {
                 if (derecha)
                 {

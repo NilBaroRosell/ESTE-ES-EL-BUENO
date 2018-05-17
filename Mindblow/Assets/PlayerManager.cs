@@ -91,6 +91,8 @@ public class PlayerManager : MonoBehaviour {
             col.gameObject.tag == "Laser Pistol 1" ||
             col.gameObject.tag == "Laser Pistol 2" ||
             col.gameObject.tag == "Zona Laser" ||
+            col.gameObject.tag == "MiniBoss" ||
+            col.gameObject.tag == "Boss 3" ||
             col.gameObject.tag == "Area de Explosion") //|| col.tag == "OtroEnemigo")
         {
             if (col.transform.localPosition.x < NAVE.localPosition.x)

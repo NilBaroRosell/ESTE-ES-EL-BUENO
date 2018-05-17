@@ -145,6 +145,8 @@ TagManager:
   - Goma6
   - Goma7
   - Goma8
+  - MiniBoss
+  - Boss 3
   layers:
   - Default
   - TransparentFX
