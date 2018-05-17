@@ -24,6 +24,11 @@ public class GameControl : MonoBehaviour
     public float tx1, tx2, ty1, ty2;
     public float lx1, lx2, ly1, ly2;
 
+    public AudioClip sonidoElectricidad;
+    public AudioSource fuenteDeAudioLuz;
+    public AudioClip sonidoPuerta;
+    public AudioSource fuenteDeAudioPuerta;
+
     private void Awake()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
@@ -49,7 +54,7 @@ public class GameControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        fuenteDeAudioLuz = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -62,10 +67,7 @@ public class GameControl : MonoBehaviour
     {
         checkLuz();
 
-        if (luz)
-        {
-            Destroy(apagon);
-        }
+        if (luz) Destroy(apagon);
 
         checkDoor();
         checkKeyDoor();
@@ -126,6 +128,8 @@ public class GameControl : MonoBehaviour
             lastPosY = getVariables.transformJugador.localPosition.y;
             transformJugador.localPosition = new Vector2(xProva1, yProva1);// anar a habitacio
             habitacio1 = true;
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos3 && transformJugador.localPosition.x <= xPos4) && (transformJugador.localPosition.y >= yPos3 && transformJugador.localPosition.y <= yPos4))
@@ -134,6 +138,8 @@ public class GameControl : MonoBehaviour
             lastPosX = getVariables.transformJugador.localPosition.x;
             lastPosY = getVariables.transformJugador.localPosition.y;
             transformJugador.localPosition = new Vector2(xProva2, yProva2); // anar a habitacio 2
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos11 && transformJugador.localPosition.x <= xPos12) && (transformJugador.localPosition.y >= yPos11 && transformJugador.localPosition.y <= yPos12))
@@ -142,6 +148,8 @@ public class GameControl : MonoBehaviour
             lastPosX = getVariables.transformJugador.localPosition.x;
             lastPosY = getVariables.transformJugador.localPosition.y;
             transformJugador.localPosition = new Vector2(xProva3, yProva3); // anar a habitacio 3
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos15 && transformJugador.localPosition.x <= xPos16) && (transformJugador.localPosition.y >= yPos15 && transformJugador.localPosition.y <= yPos16))
@@ -150,6 +158,8 @@ public class GameControl : MonoBehaviour
             lastPosX = getVariables.transformJugador.localPosition.x;
             lastPosY = getVariables.transformJugador.localPosition.y;
             transformJugador.localPosition = new Vector2(xProva4, yProva4); // anar a habitacio 4
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos19 && transformJugador.localPosition.x <= xPos20) && (transformJugador.localPosition.y >= yPos19 && transformJugador.localPosition.y <= yPos20))
@@ -158,32 +168,60 @@ public class GameControl : MonoBehaviour
             lastPosX = getVariables.transformJugador.localPosition.x;
             lastPosY = getVariables.transformJugador.localPosition.y;
             transformJugador.localPosition = new Vector2(xProva5, yProva5); // anar a habitacio 5
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos5 && transformJugador.localPosition.x <= xPos6) && (transformJugador.localPosition.y >= yPos5 && transformJugador.localPosition.y <= yPos6))
         {
             transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5); // tornar al nivell 1
             habitacio1 = false;
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos7 && transformJugador.localPosition.x <= xPos8) && (transformJugador.localPosition.y >= yPos7 && transformJugador.localPosition.y <= yPos8)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
-
+        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos7 && transformJugador.localPosition.x <= xPos8) && (transformJugador.localPosition.y >= yPos7 && transformJugador.localPosition.y <= yPos8))
+        {
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
+        }
+    
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos9 && transformJugador.localPosition.x <= xPos10) && (transformJugador.localPosition.y >= yPos9 && transformJugador.localPosition.y <= yPos10))
         {
             checkPoint = 3;
             transformJugador.localPosition = new Vector2(nivel2X, nivel2Y + 5);
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos13 && transformJugador.localPosition.x <= xPos14) && (transformJugador.localPosition.y >= yPos13 && transformJugador.localPosition.y <= yPos14)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos13 && transformJugador.localPosition.x <= xPos14) && (transformJugador.localPosition.y >= yPos13 && transformJugador.localPosition.y <= yPos14))
+        {
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
+        }
 
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos17 && transformJugador.localPosition.x <= xPos18) && (transformJugador.localPosition.y >= yPos17 && transformJugador.localPosition.y <= yPos18)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos17 && transformJugador.localPosition.x <= xPos18) && (transformJugador.localPosition.y >= yPos17 && transformJugador.localPosition.y <= yPos18))
+        {
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
+        }
 
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos21 && transformJugador.localPosition.x <= xPos22) && (transformJugador.localPosition.y >= yPos21 && transformJugador.localPosition.y <= yPos22)) transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos21 && transformJugador.localPosition.x <= xPos22) && (transformJugador.localPosition.y >= yPos21 && transformJugador.localPosition.y <= yPos22))
+        {
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
+        }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos23 && transformJugador.localPosition.x <= xPos24) && (transformJugador.localPosition.y >= yPos23 && transformJugador.localPosition.y <= yPos24))
         { 
             checkPoint = 6;
             transformJugador.localPosition = new Vector2(nivel3X, nivel3Y + 5);
+            fuenteDeAudioPuerta.clip = sonidoPuerta;
+            fuenteDeAudioPuerta.Play();
         }
     }
     
@@ -267,7 +305,12 @@ public class GameControl : MonoBehaviour
 
     void checkLuz()
     {
-        if (((transformJugador.localPosition.x >= lx1 && transformJugador.localPosition.x <= lx2) && (transformJugador.localPosition.y >= ly1 && transformJugador.localPosition.y <= ly2)) && Input.GetKey(KeyCode.E)) luz = true;
+        if (((transformJugador.localPosition.x >= lx1 && transformJugador.localPosition.x <= lx2) && (transformJugador.localPosition.y >= ly1 && transformJugador.localPosition.y <= ly2)) && Input.GetKey(KeyCode.E))
+        {
+            luz = true;
+            fuenteDeAudioLuz.clip = sonidoElectricidad;
+            fuenteDeAudioLuz.Play();
+        }
     }
 }
 

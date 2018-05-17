@@ -19,7 +19,6 @@ public class moviment : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       
     }
 
     // Update is called once per frame
@@ -48,7 +47,7 @@ public class moviment : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(new Vector2(60, 0));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && (tocandoElSuelo || tocandoEscalera)) // saltar
+        if (espacio && (tocandoElSuelo || tocandoEscalera)) // saltar
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1800));
             espacio = false;

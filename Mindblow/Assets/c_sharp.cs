@@ -11,9 +11,13 @@ public class c_sharp : MonoBehaviour {
 	public GameObject EspadaPrefab;
     public float cooldown;
     float desiredTime;
+
+    public AudioClip sonidoDisparo;
+    public AudioSource fuenteDeAudioDisparo;
+
     // Use this for initialization
     void Start () {
-
+        fuenteDeAudioDisparo = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,7 +56,9 @@ public class c_sharp : MonoBehaviour {
 		{
 			Instantiate (SquarePrefab, canon.position, canon.rotation);
             desiredTime = 0;
-		}
+            fuenteDeAudioDisparo.clip = sonidoDisparo;
+            fuenteDeAudioDisparo.Play();
+        }
 	}
 
 	public void playerSword()
