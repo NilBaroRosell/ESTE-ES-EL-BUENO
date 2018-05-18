@@ -91,10 +91,31 @@ public class lanzamiento_enemigo : MonoBehaviour {
 
     void girarEnemigo(Transform transformEnemigo)
     {
-        if (derecha)
-            transformEnemigo.localScale = new Vector3(-1, 1, 1);
-        else
-            transformEnemigo.localScale = new Vector3(1, 1, 1);
+        switch (tagEnemigo)
+        {
+            case "Enemigo 2":
+                if (derecha)
+                {
+                    transformEnemigo.localScale = new Vector3(-0.2811019f, 0.4119202f, 1);
+                    break;
+                }
+                else
+                {
+                    transformEnemigo.localScale = new Vector3(0.2811019f, 0.4119202f, 1);
+                    break;
+                }
 
+            case "Enemigo 5":
+                if (derecha)
+                {
+                    transformEnemigo.localScale = new Vector3(-0.09207151f, 0.07040372f, 1);
+                    break;
+                }
+                else
+                {
+                    transformEnemigo.localScale = new Vector3(0.09207151f, 0.07040372f, 1);
+                    break;
+                }
+        }
     }
 }
