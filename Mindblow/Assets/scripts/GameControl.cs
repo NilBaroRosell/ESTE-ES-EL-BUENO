@@ -28,6 +28,8 @@ public class GameControl : MonoBehaviour
     public AudioSource fuenteDeAudioLuz;
     public AudioClip sonidoPuerta;
     public AudioSource fuenteDeAudioPuerta;
+    public AudioClip sonidoPuertaLlave;
+    public AudioSource fuenteDeAudioPuertaLlave;
 
     private void Awake()
     {
@@ -55,6 +57,8 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         fuenteDeAudioLuz = GetComponent<AudioSource>();
+        fuenteDeAudioPuerta = GetComponent<AudioSource>();
+        fuenteDeAudioPuertaLlave = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -233,6 +237,8 @@ public class GameControl : MonoBehaviour
             {
                 Destroy(puertaLlave);
                 checkPoint = 1;
+                fuenteDeAudioPuertaLlave.clip = sonidoPuertaLlave;
+                fuenteDeAudioPuertaLlave.Play();
                 llave = false;
             }
         }
@@ -243,6 +249,8 @@ public class GameControl : MonoBehaviour
             {
                 Destroy(puertaLlave2);
                 checkPoint = 2;
+                fuenteDeAudioPuertaLlave.clip = sonidoPuertaLlave;
+                fuenteDeAudioPuertaLlave.Play();
                 llave = false;
             }
         }
@@ -253,6 +261,8 @@ public class GameControl : MonoBehaviour
             {
                 Destroy(puertaLlave3);
                 checkPoint = 4;
+                fuenteDeAudioPuertaLlave.clip = sonidoPuertaLlave;
+                fuenteDeAudioPuertaLlave.Play();
                 llave = false;
             }
         }
@@ -263,6 +273,8 @@ public class GameControl : MonoBehaviour
             {
                 Destroy(puertaLlave4);
                 checkPoint = 5;
+                fuenteDeAudioPuertaLlave.clip = sonidoPuertaLlave;
+                fuenteDeAudioPuertaLlave.Play();
                 llaveEspecial1 = false;
             }
         }
@@ -273,6 +285,8 @@ public class GameControl : MonoBehaviour
             {
                 Destroy(puertaLlave5);
                 checkPoint = 7;
+                fuenteDeAudioPuertaLlave.clip = sonidoPuertaLlave;
+                fuenteDeAudioPuertaLlave.Play();
                 llave = false;
             }
         }
@@ -283,6 +297,8 @@ public class GameControl : MonoBehaviour
             {
                 Destroy(puertaLlave6);
                 checkPoint = 8;
+                fuenteDeAudioPuertaLlave.clip = sonidoPuertaLlave;
+                fuenteDeAudioPuertaLlave.Play();
                 llaveEspecial1 = false;
             }
         }
@@ -293,6 +309,8 @@ public class GameControl : MonoBehaviour
             {
                 Destroy(puertaLlave7);
                 checkPoint = 9;
+                fuenteDeAudioPuertaLlave.clip = sonidoPuertaLlave;
+                fuenteDeAudioPuertaLlave.Play();
                 llaveEspecial2 = false;
             }
         }

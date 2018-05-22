@@ -14,10 +14,13 @@ public class c_sharp : MonoBehaviour {
 
     public AudioClip sonidoDisparo;
     public AudioSource fuenteDeAudioDisparo;
+    public AudioClip sonidoEspada;
+    public AudioSource fuenteDeAudioEspada;
 
     // Use this for initialization
     void Start () {
         fuenteDeAudioDisparo = GetComponent<AudioSource>();
+        fuenteDeAudioEspada= GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -66,6 +69,8 @@ public class c_sharp : MonoBehaviour {
 		if(Input.GetButtonDown("Fire2"))
 		{
 			Instantiate (EspadaPrefab, canon.position, canon.rotation);
-		}
+            fuenteDeAudioEspada.clip = sonidoEspada;
+            fuenteDeAudioEspada.Play();
+        }
 	}
 }
