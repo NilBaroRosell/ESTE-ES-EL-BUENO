@@ -17,7 +17,12 @@ public class Enemy : MonoBehaviour {
     bool paso1_2;
     bool paso2_3;
 
+    public AudioClip sonidoEnemigoTocadp;
+    public AudioSource fuenteDeAudioEnemigoTocado;
+
     public float xIni, yIni;
+
+    public bool dead = false;
 
     void Awake()
 	{
@@ -39,6 +44,7 @@ public class Enemy : MonoBehaviour {
 
         if (change)
         {
+            dead = true;
             Enemigo.transform.localPosition = new Vector2(xIni, yIni);
             health = 3;
         }
@@ -50,10 +56,13 @@ public class Enemy : MonoBehaviour {
 		{
             if (health > 1)
             {
+                fuenteDeAudioEnemigoTocado.clip = sonidoEnemigoTocadp;
+                fuenteDeAudioEnemigoTocado.Play();
                 health--;
             }
             else
             {
+                dead = true;
                 Enemigo.transform.localPosition = new Vector2(-877, -5);
             }
 		}

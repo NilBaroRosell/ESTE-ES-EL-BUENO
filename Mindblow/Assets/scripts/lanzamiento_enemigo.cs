@@ -16,6 +16,9 @@ public class lanzamiento_enemigo : MonoBehaviour {
     public float cooldown;
     float desiredTime;
 
+    public AudioClip sonidoGranada;
+    public AudioSource fuenteDeAudioGranada;
+
 
     private void Awake()
     {
@@ -48,6 +51,8 @@ public class lanzamiento_enemigo : MonoBehaviour {
                 if (enemigo.tag != "Mortero 1" && enemigo.tag != "Mortero 3")
                 {
                     Instantiate(FootPrefab, canon.position, canon.rotation);//*****
+                    fuenteDeAudioGranada.clip = sonidoGranada;
+                    fuenteDeAudioGranada.Play();
                     desiredTime = 0;
                 }
             }
@@ -83,6 +88,8 @@ public class lanzamiento_enemigo : MonoBehaviour {
                 if (enemigo.tag != "Justice Flash")
                 {
                     Instantiate(FootPrefab, canon.position, canon.rotation);//*****
+                    fuenteDeAudioGranada.clip = sonidoGranada;
+                    fuenteDeAudioGranada.Play();
                     desiredTime = 0;
                 }
             }

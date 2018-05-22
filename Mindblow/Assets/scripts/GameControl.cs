@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour
 {
     public GameObject Player;
+    private Enemy getDeath;
+    public GameObject Enemigo;
     public Renderer apagon;
     private PlayerManager getDamage;
 
@@ -31,10 +33,14 @@ public class GameControl : MonoBehaviour
     public AudioClip sonidoPuertaLlave;
     public AudioSource fuenteDeAudioPuertaLlave;
 
+    public bool bossDead = false;
+    public bool activarSeguimiento = false;
+
     private void Awake()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
         transformJugador = jugador.transform;
+        Enemigo = GameObject.FindGameObjectWithTag("Enemigo 7");
         Llave = GameObject.FindGameObjectWithTag("Llave");
         Llave2 = GameObject.FindGameObjectWithTag("Llave2");
         Llave3 = GameObject.FindGameObjectWithTag("Llave 3");
@@ -64,7 +70,8 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        getDeath = Enemigo.GetComponent<Enemy>();
+        bossDead = getDeath.dead;
     }
 
     private void FixedUpdate()
@@ -80,6 +87,8 @@ public class GameControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Llave") activarSeguimiento = true;
+
         if (collision.gameObject.tag == "Llave")
         {
             llave = true;
@@ -191,10 +200,10 @@ public class GameControl : MonoBehaviour
             fuenteDeAudioPuerta.Play();
         }
     
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos9 && transformJugador.localPosition.x <= xPos10) && (transformJugador.localPosition.y >= yPos9 && transformJugador.localPosition.y <= yPos10))
+        if (bossDead && Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos9 && transformJugador.localPosition.x <= xPos10) && (transformJugador.localPosition.y >= yPos9 && transformJugador.localPosition.y <= yPos10))
         {
             checkPoint = 3;
-            transformJugador.localPosition = new Vector2(nivel2X, nivel2Y + 5);
+            transformJugador.localPosition = new Vector2(nivel2X, nivel2Y + 5); // anar al nivell 2
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }

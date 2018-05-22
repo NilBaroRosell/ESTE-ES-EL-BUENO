@@ -20,6 +20,9 @@ public class Enemy_Boss : MonoBehaviour {
 
     public float xIni, yIni;
 
+    public AudioClip sonidoEnemigoTocadp;
+    public AudioSource fuenteDeAudioEnemigoTocado;
+
     void Awake()
     {
         enemy = GetComponent<Rigidbody2D>();
@@ -58,6 +61,8 @@ public class Enemy_Boss : MonoBehaviour {
         {
             if (health > 1)
             {
+                fuenteDeAudioEnemigoTocado.clip = sonidoEnemigoTocadp;
+                fuenteDeAudioEnemigoTocado.Play();
                 health--;
                 if (health == 9)
                 {

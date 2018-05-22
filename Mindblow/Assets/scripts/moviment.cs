@@ -10,6 +10,9 @@ public class moviment : MonoBehaviour
     public GameObject jugador;
     public Transform transformJugador;
 
+    public AudioClip sonidoSalto;
+    public AudioSource fuenteDeAudioSalto;
+
     private void Awake()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
@@ -19,6 +22,7 @@ public class moviment : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        fuenteDeAudioSalto = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,6 +54,8 @@ public class moviment : MonoBehaviour
         if (espacio && (tocandoElSuelo || tocandoEscalera)) // saltar
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1800));
+            fuenteDeAudioSalto.clip = sonidoSalto;
+            fuenteDeAudioSalto.Play();
             espacio = false;
             tocandoElSuelo = false;
             tocandoEscalera = false;            

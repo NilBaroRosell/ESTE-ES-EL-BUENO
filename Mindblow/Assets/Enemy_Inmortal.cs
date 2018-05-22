@@ -17,6 +17,9 @@ public class Enemy_Inmortal : MonoBehaviour {
     private bool change;
     public float xIni, yIni;
 
+    public AudioClip sonidoEnemigoTocadp;
+    public AudioSource fuenteDeAudioEnemigoTocado;
+
     void Awake()
     {
         enemy = GetComponent<Rigidbody2D>();
@@ -47,6 +50,8 @@ public class Enemy_Inmortal : MonoBehaviour {
         {
             if (health > 1)
             {
+                fuenteDeAudioEnemigoTocado.clip = sonidoEnemigoTocadp;
+                fuenteDeAudioEnemigoTocado.Play();
                 health--;
             }
             else

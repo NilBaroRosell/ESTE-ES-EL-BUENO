@@ -12,6 +12,9 @@ public class movimiento_enemigo : MonoBehaviour {
     public bool derecha, siguiendo;
     public float minX, maxX, distancia;
 
+    private GameControl getTouching;
+    public bool change = false;
+
 
     private void Awake()
     {
@@ -29,12 +32,15 @@ public class movimiento_enemigo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        getTouching = jugador.GetComponent<GameControl>();
+        change = getTouching.activarSeguimiento;
     }
 
 
     private void FixedUpdate()
     {
+        if (change) siguiendo = true;
+
         if (siguiendo)
         {
             if (transformJugador.localPosition.x - transformEnemigo.localPosition.x >= distancia || transformEnemigo.localPosition.x - transformJugador.localPosition.x >= distancia)
