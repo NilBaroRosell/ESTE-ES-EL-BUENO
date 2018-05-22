@@ -32,6 +32,10 @@ public class GameControl : MonoBehaviour
     public AudioSource fuenteDeAudioPuerta;
     public AudioClip sonidoPuertaLlave;
     public AudioSource fuenteDeAudioPuertaLlave;
+    public AudioClip sonidoTrampolin;
+    public AudioSource fuenteDeAudioTrampolin;
+    public AudioClip sonidoLlave;
+    public AudioSource fuenteDeAudioLlave;
 
     public bool bossDead = false;
     public bool activarSeguimiento = false;
@@ -87,46 +91,68 @@ public class GameControl : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Trampolin")
+        {
+            fuenteDeAudioTrampolin.clip = sonidoTrampolin;
+            fuenteDeAudioTrampolin.Play();
+        }
+
         if (collision.gameObject.tag == "Llave") activarSeguimiento = true;
 
         if (collision.gameObject.tag == "Llave")
         {
             llave = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Llave);
         }
         else if (collision.gameObject.tag == "Llave2")
         {
             llave = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Llave2);
         }
         else if (collision.gameObject.tag == "Llave 3")
         {
             llave = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Llave3);
         }
         else if (collision.gameObject.tag == "Llave 4")
         {
             llaveEspecial1 = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Llave4);
         }
         else if (collision.gameObject.tag == "Llave 5")
         {
             llave = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Llave5);
         }
         else if (collision.gameObject.tag == "Llave 6")
         {
             llaveEspecial1 = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Llave6);
         }
         else if (collision.gameObject.tag == "Llave 7")
         {
             llaveEspecial2 = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Llave7);
         }
         else if (collision.gameObject.tag == "Luz")
         {
             luz = true;
+            fuenteDeAudioLlave.clip = sonidoLlave;
+            fuenteDeAudioLlave.Play();
             Destroy(Luz);
         }
     }
@@ -195,7 +221,7 @@ public class GameControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos7 && transformJugador.localPosition.x <= xPos8) && (transformJugador.localPosition.y >= yPos7 && transformJugador.localPosition.y <= yPos8))
         {
-            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5); // tornar al nivell 1
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }
@@ -210,21 +236,21 @@ public class GameControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos13 && transformJugador.localPosition.x <= xPos14) && (transformJugador.localPosition.y >= yPos13 && transformJugador.localPosition.y <= yPos14))
         {
-            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5); // tornar al 2
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos17 && transformJugador.localPosition.x <= xPos18) && (transformJugador.localPosition.y >= yPos17 && transformJugador.localPosition.y <= yPos18))
         {
-            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5); // tornar al 2
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos21 && transformJugador.localPosition.x <= xPos22) && (transformJugador.localPosition.y >= yPos21 && transformJugador.localPosition.y <= yPos22))
         {
-            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5);
+            transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5); // tornar al 2
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }
@@ -232,7 +258,7 @@ public class GameControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos23 && transformJugador.localPosition.x <= xPos24) && (transformJugador.localPosition.y >= yPos23 && transformJugador.localPosition.y <= yPos24))
         { 
             checkPoint = 6;
-            transformJugador.localPosition = new Vector2(nivel3X, nivel3Y + 5);
+            transformJugador.localPosition = new Vector2(nivel3X, nivel3Y + 5); // anar al nivell 3
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }

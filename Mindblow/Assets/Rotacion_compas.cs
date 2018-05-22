@@ -9,14 +9,24 @@ public class Rotacion_compas : MonoBehaviour {
 
     float value;
 
+    private void Awake()
+    {
+    }
+
     // Use this for initialization
     void Start () {
         value = 0;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         value += 3;
         transformCompas.rotation = Quaternion.Euler(0,0,value);
 	}
+
+    private void FixedUpdate()
+    {
+        
+    }
 }

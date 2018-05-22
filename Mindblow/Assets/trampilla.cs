@@ -6,6 +6,7 @@ public class trampilla : MonoBehaviour {
 
     private Rigidbody2D Trampilla;
 
+
     // Use this for initialization
     void Start () {
         Trampilla = GetComponent<Rigidbody2D>();

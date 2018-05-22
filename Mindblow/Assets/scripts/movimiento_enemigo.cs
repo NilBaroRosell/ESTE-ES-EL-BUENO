@@ -39,7 +39,7 @@ public class movimiento_enemigo : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (change) siguiendo = true;
+        if (change && tagEnemigo == "Dibujante 1") siguiendo = true;
 
         if (siguiendo)
         {
