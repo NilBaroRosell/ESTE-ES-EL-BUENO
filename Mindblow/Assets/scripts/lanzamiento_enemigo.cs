@@ -113,6 +113,9 @@ public class lanzamiento_enemigo : MonoBehaviour {
                 }
 
             case "Enemigo 5":
+            case "Enemigo 6":
+            case "Enemigo 9":
+            case "Enemigo 15":
                 if (derecha)
                 {
                     transformEnemigo.localScale = new Vector3(-0.09207151f, 0.07040372f, 1);

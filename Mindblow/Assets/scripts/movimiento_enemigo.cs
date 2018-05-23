@@ -161,6 +161,9 @@ public class movimiento_enemigo : MonoBehaviour {
                 }
 
             case "Enemigo 5":
+            case "Enemigo 6":
+            case "Enemigo 9":
+            case "Enemigo 15":
                 if (derecha)
                 {
                     transformEnemigo.localScale = new Vector3(-0.09207151f, 0.07040372f, 1);
@@ -169,6 +172,35 @@ public class movimiento_enemigo : MonoBehaviour {
                 else
                 {
                     transformEnemigo.localScale = new Vector3(0.09207151f, 0.07040372f, 1);
+                    break;
+                }
+
+            case "Enemigo":
+            case "Enemigo 3":
+            case "Enemigo 4":
+            case "Enemigo 8":
+            case "Enemigo 10":
+            case "Enemigo 11":
+            case "Enemigo 12":
+            case "Enemigo 13":
+            case "Enemigo 14":
+            case "Enemigo 16":
+            case "Enemigo 17":
+            case "Enemigo 18":
+            case "Enemigo 19":
+            case "Dibujante 1":
+            case "Dibujante 2":
+            case "Dibujante 3":
+            case "Dibujante 4":
+            case "Dibujante 5":
+                if (derecha)
+                {
+                    transformEnemigo.localScale = new Vector3(-1, 1, 1);
+                    break;
+                }
+                else
+                {
+                    transformEnemigo.localScale = new Vector3(1, 1, 1);
                     break;
                 }
         }
