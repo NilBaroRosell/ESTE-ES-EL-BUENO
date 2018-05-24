@@ -97,63 +97,63 @@ public class GameControl : MonoBehaviour
             fuenteDeAudioTrampolin.Play();
         }
 
-        if (collision.gameObject.tag == "Llave") activarSeguimiento = true;
+        if (collision.gameObject.tag == "Boton") activarSeguimiento = true;
 
         if (collision.gameObject.tag == "Llave")
         {
             llave = true;
+            Destroy(Llave);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Llave);
         }
         else if (collision.gameObject.tag == "Llave2")
         {
             llave = true;
+            Destroy(Llave2);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Llave2);
         }
         else if (collision.gameObject.tag == "Llave 3")
         {
             llave = true;
+            Destroy(Llave3);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Llave3);
         }
         else if (collision.gameObject.tag == "Llave 4")
         {
             llaveEspecial1 = true;
+            Destroy(Llave4);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Llave4);
         }
         else if (collision.gameObject.tag == "Llave 5")
         {
             llave = true;
+            Destroy(Llave5);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Llave5);
         }
         else if (collision.gameObject.tag == "Llave 6")
         {
             llaveEspecial1 = true;
+            Destroy(Llave6);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Llave6);
         }
         else if (collision.gameObject.tag == "Llave 7")
         {
             llaveEspecial2 = true;
+            Destroy(Llave7);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Llave7);
         }
         else if (collision.gameObject.tag == "Luz")
         {
             luz = true;
+            Destroy(Luz);
             fuenteDeAudioLlave.clip = sonidoLlave;
             fuenteDeAudioLlave.Play();
-            Destroy(Luz);
         }
     }
 
@@ -366,4 +366,3 @@ public class GameControl : MonoBehaviour
         }
     }
 }
-

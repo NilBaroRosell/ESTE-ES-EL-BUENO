@@ -14,7 +14,9 @@ public class prova3 : MonoBehaviour {
     public Transform transformPared, transformPared2, transformPared3, transformPared4, transformPared5, transformPared6, transformPared7, transformPared8, transformPared9;
     public bool pinchos1, pinchos2, pinchos3, pinchos4, pinchos5, pinchos6, pinchos7, pinchos8, pinchos9;
     public float yMax1, yMin1, yMax2, yMin2;
-    
+
+    public AudioClip sonidoMovimiento;
+    public AudioSource fuenteDeAudioMovimiento;
 
     private void Awake()
     {
@@ -101,69 +103,97 @@ public class prova3 : MonoBehaviour {
         {
             if (pinchos1) pinchos1 = false;
             else pinchos1 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 148.65 && transformJugador.localPosition.x < 150.64 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos2) pinchos2 = false;
             else pinchos2 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 173.75 && transformJugador.localPosition.x < 175.78 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos3) pinchos3 = false;
             else pinchos3 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
 
             if (pinchos5) pinchos5 = false;
             else pinchos5 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 184.81 && transformJugador.localPosition.x < 186.83 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos3) pinchos3 = false;
             else pinchos3 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
 
             if (pinchos4) pinchos4 = false;
             else pinchos4 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 195.883 && transformJugador.localPosition.x < 197.92 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos4) pinchos4 = false;
             else pinchos4 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
 
             if (pinchos5) pinchos5 = false;
             else pinchos5 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 219.04 && transformJugador.localPosition.x < 221.065 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos6) pinchos6 = false;
             else pinchos6 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
 
             if (pinchos7) pinchos7 = false;
             else pinchos7 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 232.11 && transformJugador.localPosition.x < 234.14 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos8) pinchos8 = false;
             else pinchos8 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 243.185 && transformJugador.localPosition.x < 245.205 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos8) pinchos8 = false;
             else pinchos8 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
 
             if (pinchos9) pinchos9 = false;
             else pinchos9 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
 
         if (transformJugador.localPosition.x > 254.26 && transformJugador.localPosition.x < 256.27 && transformJugador.localPosition.y > -59.17 && transformJugador.localPosition.y < 58.203 && Input.GetKeyDown(KeyCode.E))
         {
             if (pinchos6) pinchos6 = false;
             else pinchos6 = true;
+            fuenteDeAudioMovimiento.clip = sonidoMovimiento;
+            fuenteDeAudioMovimiento.Play();
         }
     }
 

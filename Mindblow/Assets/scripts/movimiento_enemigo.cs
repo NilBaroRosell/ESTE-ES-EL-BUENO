@@ -39,7 +39,19 @@ public class movimiento_enemigo : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (change && tagEnemigo == "Dibujante 1") siguiendo = true;
+        if (change && tagEnemigo == "Dibujante 1")
+        {
+            if ((Mathf.Abs(transformEnemigo.localPosition.x - transformJugador.localPosition.x)) >= distancia)
+            {
+                siguiendo = true;
+                derecha = false;
+            }
+            
+            else
+            {
+                change = false;
+            }
+        }
 
         if (siguiendo)
         {
