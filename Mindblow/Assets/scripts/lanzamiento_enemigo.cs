@@ -112,6 +112,23 @@ public class lanzamiento_enemigo : MonoBehaviour {
                     break;
                 }
 
+            case "Mortero 1":
+            case "Mortero 3":
+            case "Laser Pistol 1":
+            case "Laser Pistol 2":
+                if (derecha)
+                {
+                    transformEnemigo.localScale = new Vector3(-1, 1, 1);
+                    break;
+                }
+                else
+                {
+                    transformEnemigo.localScale = new Vector3(1, 1, 1);
+                    break;
+                }
+
+
+
             case "Enemigo 5":
             case "Enemigo 6":
             case "Enemigo 9":
@@ -124,6 +141,18 @@ public class lanzamiento_enemigo : MonoBehaviour {
                 else
                 {
                     transformEnemigo.localScale = new Vector3(0.09207151f, 0.07040372f, 1);
+                    break;
+                }
+
+            case "Lanzador de Esferas":
+                if (derecha)
+                {
+                    transformEnemigo.localScale = new Vector3(-2.604883f, 2.880935f, 1);
+                    break;
+                }
+                else
+                {
+                    transformEnemigo.localScale = new Vector3(2.604883f, 2.880935f, 1);
                     break;
                 }
         }

@@ -30,7 +30,15 @@ public class PlayerManager : MonoBehaviour {
         if (change) Vida = 100;
     }
 
-	void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Compas")
+        {
+            player.velocity = new Vector2(25, 25);
+            Vida -= 2;
+        }
+    }
+    void OnCollisionEnter2D(Collision2D col)
 	{
         if (col.gameObject.tag == "Enemigo" ||
             col.gameObject.tag == "Enemigo 2" ||
@@ -58,15 +66,6 @@ public class PlayerManager : MonoBehaviour {
             col.gameObject.tag == "Enemigo 14" ||
             col.gameObject.tag == "Enemigo 15" ||
 
-
-            col.gameObject.tag == "Compas 1" ||
-            col.gameObject.tag == "Compas 2" ||
-            col.gameObject.tag == "Compas 3" ||
-            col.gameObject.tag == "Compas 4" ||
-            col.gameObject.tag == "Compas 5" ||
-            col.gameObject.tag == "Compas 6" ||
-            col.gameObject.tag == "Compas 7" ||
-            col.gameObject.tag == "Compas 8" ||
             col.gameObject.tag == "Compas" ||
             col.gameObject.tag == "Dibujante 1" ||
             col.gameObject.tag == "Dibujante 2" ||

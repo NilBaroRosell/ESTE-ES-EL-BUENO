@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4066485174926530}
   - component: {fileID: 212703449332772806}
   - component: {fileID: 50125263637872978}
-  - component: {fileID: 61701293688841520}
   - component: {fileID: 114473559667037056}
+  - component: {fileID: 68683765005811674}
   m_Layer: 0
   m_Name: FootPrefab_6
   m_TagString: Enemy Ball 6
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828643561385994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 149.56879, y: -25.82844, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 229.09, y: -5.2, z: 0}
+  m_LocalScale: {x: 0.11275627, y: 0.11701066, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61701293688841520
-BoxCollider2D:
+--- !u!68 &68683765005811674
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,18 +76,29 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.5417624, y: -0.43459138}
+  - {x: 0.8755554, y: -0.42896357}
+  - {x: 0.88448685, y: -0.25640094}
+  - {x: -0.8651353, y: -0.2525988}
+  - {x: -0.87514937, y: -0.4504193}
+  - {x: -1.5670682, y: -0.44815758}
+  - {x: -1.5458221, y: -0.025078535}
+  - {x: -1.4532595, y: 0.2880364}
+  - {x: -1.3210466, y: 0.6133157}
+  - {x: -1.047554, y: 0.9411216}
+  - {x: -0.77176076, y: 1.1618159}
+  - {x: -0.4186968, y: 1.2977796}
+  - {x: 0.08430773, y: 1.3812226}
+  - {x: 0.4613243, y: 1.2888346}
+  - {x: 0.8193953, y: 1.1489425}
+  - {x: 1.0543202, y: 0.9648757}
+  - {x: 1.2843734, y: 0.69744736}
+  - {x: 1.4597552, y: 0.40053526}
+  - {x: 1.5377026, y: 0.15649837}
+  - {x: 1.56991, y: -0.078059696}
+  - {x: 1.552047, y: -0.42589906}
 --- !u!114 &114473559667037056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1cf0c0f7250dbe946ac8fe8116c9de1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8b4712d61afa3c4cb0d27e4daa32443, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

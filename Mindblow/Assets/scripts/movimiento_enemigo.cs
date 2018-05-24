@@ -203,6 +203,21 @@ public class movimiento_enemigo : MonoBehaviour {
                     transformEnemigo.localScale = new Vector3(1, 1, 1);
                     break;
                 }
+
+            case "Enemigo 3.1":
+            case "Enemigo 3.2":
+            case "Enemigo 3.3":
+            case "Enemigo 3.4":
+                if (derecha)
+                {
+                    transformEnemigo.localScale = new Vector3(-2.701154f, 2.455967f, 1);
+                    break;
+                }
+                else
+                {
+                    transformEnemigo.localScale = new Vector3(2.701154f, 2.455967f, 1);
+                    break;
+                }
         }
     }
 }

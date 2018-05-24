@@ -10,7 +10,7 @@ public class Movimiento_Boss_2 : MonoBehaviour {
     public Transform transformEnemigo;
     public string tagEnemigo;
     public bool derecha, siguiendo;
-    public float minX, maxX, distancia;
+    public float minX, maxX, distancia, velocidad = 100;
 
     private void Awake()
     {
@@ -47,12 +47,12 @@ public class Movimiento_Boss_2 : MonoBehaviour {
                 if (derecha)
                 {
                     // camina derecha
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(velocidad, 0));
                 }
                 else
                 {
                     // camina izquierda
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(-80, 0));
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(-velocidad, 0));
                 }
             }
         }
@@ -64,7 +64,7 @@ public class Movimiento_Boss_2 : MonoBehaviour {
                 if (derecha)
                 {
                     // camina derecha
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(velocidad, 0));
                 }
 
                 else
@@ -74,7 +74,7 @@ public class Movimiento_Boss_2 : MonoBehaviour {
                     derecha = true;
 
                     // camina derecha
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(velocidad, 0));
                 }
             }
 
@@ -87,13 +87,13 @@ public class Movimiento_Boss_2 : MonoBehaviour {
                     derecha = false;
 
                     // camina izquierda
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(-80, 0));
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(-velocidad, 0));
                 }
 
                 else
                 {
                     // camina izquierda
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(-80, 0));
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(-velocidad, 0));
                 }
             }
 
@@ -107,13 +107,13 @@ public class Movimiento_Boss_2 : MonoBehaviour {
                         girarEnemigo(transformEnemigo);
                         derecha = false;
                         // camina izquierda
-                        GetComponent<Rigidbody2D>().AddForce(new Vector2(-80, 0));
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(-velocidad, 0));
                     }
 
                     else
                     {
                         // camina derecha
-                        GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(velocidad, 0));
                     }
                 }
 
@@ -125,13 +125,13 @@ public class Movimiento_Boss_2 : MonoBehaviour {
                         girarEnemigo(transformEnemigo);
                         derecha = true;
                         // camina derecha
-                        GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(velocidad, 0));
                     }
 
                     else
                     {
                         // camina izquierda
-                        GetComponent<Rigidbody2D>().AddForce(new Vector2(-80, 0));
+                        GetComponent<Rigidbody2D>().AddForce(new Vector2(-velocidad, 0));
                     }
                 }
             }

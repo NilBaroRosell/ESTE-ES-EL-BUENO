@@ -26,13 +26,13 @@ public class Enemy_Shoot_7 : MonoBehaviour {
         if (lados.localScale.x > 0)
         {
             Ball.velocity = new Vector2(BallSpeed, BallSpeed);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.1127563f, 0.1170107f, 1);
         }
 
         else
         {
             Ball.velocity = new Vector2(-BallSpeed, BallSpeed);
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-0.1127563f, 0.1170107f, 1);
         }
     }
 

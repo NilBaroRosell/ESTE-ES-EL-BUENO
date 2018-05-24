@@ -8,6 +8,7 @@ public class Enemy_Shoot_8 : MonoBehaviour {
 
     private Transform lados;
     private Rigidbody2D Ball;
+    public Transform transformDisparo;
 
     public float BallSpeed;
     public float BallLife;
@@ -18,6 +19,7 @@ public class Enemy_Shoot_8 : MonoBehaviour {
         Ball = GetComponent<Rigidbody2D>();
         Enemy = GameObject.FindGameObjectWithTag("Justice Flash");
         lados = Enemy.transform;
+        transformDisparo.rotation = Quaternion.Euler(0, 0, 90);
     }
 
     // Use this for initialization
@@ -26,13 +28,13 @@ public class Enemy_Shoot_8 : MonoBehaviour {
         if (lados.localScale.x > 0)
         {
             Ball.velocity = new Vector2(BallSpeed, 0);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.3247087f, 0.1510788f, 1);
         }
 
         else
         {
             Ball.velocity = new Vector2(BallSpeed, 0);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.3247087f, 0.1510788f, 1);
         }
     }
 
