@@ -15,6 +15,9 @@ public class PlayerManager : MonoBehaviour {
     public GameObject Player;
     public bool change = false;
 
+    public AudioClip sonidoAu;
+    public AudioSource fuenteDeAudioAu;
+
     // Use this for initialization
     void Start () {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -36,6 +39,8 @@ public class PlayerManager : MonoBehaviour {
         {
             player.velocity = new Vector2(25, 25);
             Vida -= 2;
+            fuenteDeAudioAu.clip = sonidoAu;
+            fuenteDeAudioAu.Play();
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -98,12 +103,16 @@ public class PlayerManager : MonoBehaviour {
             {
                 player.velocity = new Vector2(25, 25);
                 Vida -= 2;
+                fuenteDeAudioAu.clip = sonidoAu;
+                fuenteDeAudioAu.Play();
             }
 
             else
             {
                 player.velocity = new Vector2(-25, 25);
                 Vida -= 2;
+                fuenteDeAudioAu.clip = sonidoAu;
+                fuenteDeAudioAu.Play();
             }
         }
 
