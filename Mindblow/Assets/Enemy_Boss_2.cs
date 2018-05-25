@@ -20,6 +20,8 @@ public class Enemy_Boss_2 : MonoBehaviour {
     public AudioClip sonidoEnemigoTocadp;
     public AudioSource fuenteDeAudioEnemigoTocado;
 
+    public bool dead;
+
     void Awake()
     {
         enemy = GetComponent<Rigidbody2D>();
@@ -56,6 +58,7 @@ public class Enemy_Boss_2 : MonoBehaviour {
             }
             else
             {
+                dead = true;
                 Enemigo.transform.localPosition = new Vector2(-877, -5);
             }
         }

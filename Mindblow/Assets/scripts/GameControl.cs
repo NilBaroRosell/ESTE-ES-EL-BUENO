@@ -7,7 +7,9 @@ public class GameControl : MonoBehaviour
 {
     public GameObject Player;
     private Enemy getDeath;
+    private Enemy_Boss_2 getDeath2;
     public GameObject Enemigo;
+    public GameObject Enemigo2;
     public Renderer apagon;
     private PlayerManager getDamage;
 
@@ -36,8 +38,15 @@ public class GameControl : MonoBehaviour
     public AudioSource fuenteDeAudioTrampolin;
     public AudioClip sonidoLlave;
     public AudioSource fuenteDeAudioLlave;
+    public AudioClip sonidoNivel1;
+    public AudioSource fuenteDeAudioNivel1;
+    public AudioClip sonidoNivel2;
+    public AudioSource fuenteDeAudioNivel2;
+    public AudioClip sonidoNivel3;
+    public AudioSource fuenteDeAudioNivel3;
 
     public bool bossDead = false;
+    public bool boss2Dead = false;
     public bool activarSeguimiento = false;
 
     private void Awake()
@@ -66,9 +75,6 @@ public class GameControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        fuenteDeAudioLuz = GetComponent<AudioSource>();
-        fuenteDeAudioPuerta = GetComponent<AudioSource>();
-        fuenteDeAudioPuertaLlave = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -76,6 +82,8 @@ public class GameControl : MonoBehaviour
     {
         getDeath = Enemigo.GetComponent<Enemy>();
         bossDead = getDeath.dead;
+        getDeath2 = Enemigo2.GetComponent<Enemy_Boss_2>();
+        boss2Dead = getDeath2.dead;
     }
 
     private void FixedUpdate()
@@ -179,7 +187,7 @@ public class GameControl : MonoBehaviour
             transformJugador.localPosition = new Vector2(xProva2, yProva2); // anar a habitacio 2
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
-        }
+       }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos11 && transformJugador.localPosition.x <= xPos12) && (transformJugador.localPosition.y >= yPos11 && transformJugador.localPosition.y <= yPos12))
         {
@@ -232,6 +240,10 @@ public class GameControl : MonoBehaviour
             transformJugador.localPosition = new Vector2(nivel2X, nivel2Y + 5); // anar al nivell 2
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
+            fuenteDeAudioNivel1.clip = sonidoNivel1;
+            fuenteDeAudioNivel1.Stop();
+            fuenteDeAudioNivel2.clip = sonidoNivel2;
+            fuenteDeAudioNivel2.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos13 && transformJugador.localPosition.x <= xPos14) && (transformJugador.localPosition.y >= yPos13 && transformJugador.localPosition.y <= yPos14))
@@ -255,12 +267,16 @@ public class GameControl : MonoBehaviour
             fuenteDeAudioPuerta.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos23 && transformJugador.localPosition.x <= xPos24) && (transformJugador.localPosition.y >= yPos23 && transformJugador.localPosition.y <= yPos24))
+        if (boss2Dead && Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos23 && transformJugador.localPosition.x <= xPos24) && (transformJugador.localPosition.y >= yPos23 && transformJugador.localPosition.y <= yPos24))
         { 
             checkPoint = 6;
             transformJugador.localPosition = new Vector2(nivel3X, nivel3Y + 5); // anar al nivell 3
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
+            fuenteDeAudioNivel2.clip = sonidoNivel2;
+            fuenteDeAudioNivel2.Stop();
+            fuenteDeAudioNivel3.clip = sonidoNivel3;
+            fuenteDeAudioNivel3.Play();
         }
     }
     
