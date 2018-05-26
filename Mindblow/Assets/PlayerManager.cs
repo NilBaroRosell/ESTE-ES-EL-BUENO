@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour {
 	public Transform NAVE;
 
     public float Vida;
+    public float energia;
 
     private inicialitzar getCambio;
     public GameObject Player;
@@ -23,10 +24,14 @@ public class PlayerManager : MonoBehaviour {
         Player = GameObject.FindGameObjectWithTag("Player");
 		player = GetComponent<Rigidbody2D>();
         Vida = 100;
+        energia = 3;
 	}
 
 	// Update is called once per frame
 	void Update () {
+        if (Vida < 1) energia--;
+        if (energia == 0)
+
         getCambio = Player.GetComponent<inicialitzar>();
         change = getCambio.cambio;
 
@@ -128,7 +133,7 @@ public class PlayerManager : MonoBehaviour {
 
         if (col.gameObject.tag == "Curs Navet")
         {
-            NAVE.localPosition = new Vector3(7.8f, -2.8f, 0.0f);
+            SceneManager.LoadScene(1);
         }
 
     }
