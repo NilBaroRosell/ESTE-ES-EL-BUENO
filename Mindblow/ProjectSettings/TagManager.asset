@@ -148,6 +148,8 @@ TagManager:
   - MiniBoss
   - Boss 3
   - Boton
+  - Enemy Ball 8
+  - Enemy Ball 9
   layers:
   - Default
   - TransparentFX

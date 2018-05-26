@@ -57,6 +57,17 @@ public class PlayerManager : MonoBehaviour {
             col.gameObject.tag == "Enemigo 5" ||
             col.gameObject.tag == "Enemigo 6" ||
             col.gameObject.tag == "Enemigo 7" ||
+
+            col.gameObject.tag == "Enemy Ball" ||
+            col.gameObject.tag == "Enemy Ball 2" ||
+            col.gameObject.tag == "Enemy Ball 3" ||
+            col.gameObject.tag == "Enemy Ball 4" ||
+            col.gameObject.tag == "Enemy Ball 5" ||
+            col.gameObject.tag == "Enemy Ball 6" ||
+            col.gameObject.tag == "Enemy Ball 7" ||
+            col.gameObject.tag == "Enemy Ball 8" ||
+            col.gameObject.tag == "Enemy Ball 9" ||
+
             col.gameObject.tag == "Elemento Nocivo" ||
             col.gameObject.tag == "Elemento Nocivo 2" ||
             col.gameObject.tag == "Rebotante 1" ||
@@ -66,6 +77,13 @@ public class PlayerManager : MonoBehaviour {
             col.gameObject.tag == "Rebotante 5" ||
             col.gameObject.tag == "Rebotante 6" ||
             col.gameObject.tag == "Rebotante 7" ||
+            col.gameObject.tag == "Rebotante 8" ||
+            col.gameObject.tag == "Rebotante 9" ||
+            col.gameObject.tag == "Rebotante 10" ||
+            col.gameObject.tag == "Rebotante 11" ||
+            col.gameObject.tag == "Rebotante 12" ||
+            col.gameObject.tag == "Rebotante 13" ||
+            col.gameObject.tag == "Rebotante 14" ||
 
             col.gameObject.tag == "Enemigo 8" ||
             col.gameObject.tag == "Enemigo 9" ||
@@ -102,6 +120,8 @@ public class PlayerManager : MonoBehaviour {
             col.gameObject.tag == "Zona Laser" ||
             col.gameObject.tag == "MiniBoss" ||
             col.gameObject.tag == "Boss 3" ||
+
+
             col.gameObject.tag == "Area de Explosion") //|| col.tag == "OtroEnemigo")
         {
             if (col.transform.localPosition.x < NAVE.localPosition.x)

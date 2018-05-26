@@ -5,7 +5,7 @@ using UnityEngine;
 public class c_sharp : MonoBehaviour {
 
 
-	public Transform NAVE;
+    public Transform NAVE;
     public Transform canon;
 	public GameObject SquarePrefab;
 	public GameObject EspadaPrefab;
@@ -16,11 +16,16 @@ public class c_sharp : MonoBehaviour {
     public AudioSource fuenteDeAudioDisparo;
     public AudioClip sonidoEspada;
     public AudioSource fuenteDeAudioEspada;
+    private Animator myAnimator;
+    bool disparo, golpe;
 
     // Use this for initialization
     void Start () {
         fuenteDeAudioDisparo = GetComponent<AudioSource>();
         fuenteDeAudioEspada= GetComponent<AudioSource>();
+        myAnimator = GetComponent<Animator>();
+        disparo = false;
+        golpe = false;
     }
 
     // Update is called once per frame
@@ -28,8 +33,12 @@ public class c_sharp : MonoBehaviour {
     {
 		playerShoot ();
 		playerSword ();
-		NAVE.localRotation = Quaternion.Euler (0,0,0);
+        if (NAVE.localScale.x > 0) NAVE.localScale = new Vector3(0.5335937f, 0.5619395f, 1);
+        if (NAVE.localScale.x < 0) NAVE.localScale = new Vector3(-0.5335937f, 0.5619395f, 1);
+        NAVE.localRotation = Quaternion.Euler (0,0,0);
         desiredTime += Time.deltaTime;
+        myAnimator.SetBool("Disparo", disparo);
+        myAnimator.SetBool("Golpe", golpe);
     }
 
     //Com l'Update peró amb un temps d'execució més curt. S'utilitza per les físiques
@@ -55,22 +64,28 @@ public class c_sharp : MonoBehaviour {
 
 	public void playerShoot()
 	{
-		if(Input.GetButtonDown("Fire1") && (desiredTime >= cooldown))
-		{
-			Instantiate (SquarePrefab, canon.position, canon.rotation);
+        if (Input.GetButtonDown("Fire1") && (desiredTime >= cooldown))
+        {
+            disparo = true;
+            Instantiate(SquarePrefab, canon.position, canon.rotation);
             desiredTime = 0;
             fuenteDeAudioDisparo.clip = sonidoDisparo;
             fuenteDeAudioDisparo.Play();
         }
+
+        else disparo = false;
 	}
 
 	public void playerSword()
 	{
-		if(Input.GetButtonDown("Fire2"))
-		{
-			Instantiate (EspadaPrefab, canon.position, canon.rotation);
+        if (Input.GetButtonDown("Fire2"))
+        {
+            golpe = true;
+            Instantiate(EspadaPrefab, canon.position, canon.rotation);
             fuenteDeAudioEspada.clip = sonidoEspada;
             fuenteDeAudioEspada.Play();
         }
+
+        else golpe = false;
 	}
 }

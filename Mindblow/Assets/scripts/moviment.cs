@@ -6,17 +6,20 @@ public class moviment : MonoBehaviour
 {
     public bool tocandoElSuelo = true, tocandoEscalera = false;
     private bool espacio = false;
-    private bool llave;
+    private bool llave, tecla;
     public GameObject jugador;
     public Transform transformJugador;
 
     public AudioClip sonidoSalto;
     public AudioSource fuenteDeAudioSalto;
 
+    private Animator myAnimator;
+
     private void Awake()
     {
         jugador = GameObject.FindGameObjectWithTag("Player");
         transformJugador = jugador.transform;
+        myAnimator = GetComponent<Animator>();
     }
 
     // Use this for initialization
@@ -35,20 +38,28 @@ public class moviment : MonoBehaviour
                 espacio = true;
             }
         }
+        myAnimator.SetBool("Suelo", tocandoElSuelo);
     }
 
     void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.A)) // ir a la izquierda
         {
-            transformJugador.localScale = new Vector3(-1, 1, 1);
+            transformJugador.localScale = new Vector3(-0.5335937f, 0.5619395f, 1);
             GetComponent<Rigidbody2D>().AddForce(new Vector2(-60, 0));
+            tecla = true;
         }
 
         if (Input.GetKey(KeyCode.D)) // ir a la derecha
         {
-            transformJugador.localScale = new Vector3(1, 1, 1);
+            transformJugador.localScale = new Vector3(0.5335937f, 0.5619395f, 1);
             GetComponent<Rigidbody2D>().AddForce(new Vector2(60, 0));
+            tecla = true;
+        }
+
+        if (!(Input.GetKey(KeyCode.A)) && !(Input.GetKey(KeyCode.D))) // ir a la derecha
+        {
+            tecla = false;
         }
 
         if (espacio && (tocandoElSuelo || tocandoEscalera)) // saltar
@@ -60,6 +71,8 @@ public class moviment : MonoBehaviour
             tocandoElSuelo = false;
             tocandoEscalera = false;            
         }
+        myAnimator.SetBool("Suelo", tocandoElSuelo);
+        myAnimator.SetBool("Tecla", tecla);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

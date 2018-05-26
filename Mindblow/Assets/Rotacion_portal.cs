@@ -22,17 +22,17 @@ public class Rotacion_portal : MonoBehaviour {
     void Update()
     {
         value -= 20;
-        transformCompas.rotation = Quaternion.Euler(0, 0, value);
+        //transformCompas.rotation = Quaternion.Euler(0, 0, value);
         vidaEnemigo = Enemy.GetComponent<Enemy_Boss>();
         change = vidaEnemigo.health;
         if (numeroPortal == "1" && change <= 9)
         {
-            transformCompas.localPosition = new Vector2(439,-86);
+            transformCompas.localPosition = new Vector2(441.02f, -86.77f);
         }
 
         if (numeroPortal == "2" && change < 8)
         {
-            transformCompas.localPosition = new Vector2(419.44f, -76.59f);
+            transformCompas.localPosition = new Vector2(420.07f, -76.88f);
         }
     }
 }
