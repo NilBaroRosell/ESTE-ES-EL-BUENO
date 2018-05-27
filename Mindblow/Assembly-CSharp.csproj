@@ -49,6 +49,7 @@
      <Compile Include="Assets\Coque_bola.cs" />
      <Compile Include="Assets\Curs_Navet_paso.cs" />
      <Compile Include="Assets\Cus_Move.cs" />
+     <Compile Include="Assets\DeathMenu.cs" />
      <Compile Include="Assets\Enemy.cs" />
      <Compile Include="Assets\Enemy_Boss.cs" />
      <Compile Include="Assets\Enemy_Boss_2.cs" />
@@ -86,6 +87,7 @@
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\NewBehaviourScript1.cs" />
      <Compile Include="Assets\No_ExploForce.cs" />
+     <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\PlayerManager.cs" />
      <Compile Include="Assets\PositionPlayer.cs" />
      <Compile Include="Assets\Position_Enemy.cs" />
@@ -94,6 +96,7 @@
      <Compile Include="Assets\Rotacion_compas.cs" />
      <Compile Include="Assets\Rotacion_portal.cs" />
      <Compile Include="Assets\Teledirigido.cs" />
+     <Compile Include="Assets\VictoryMenu.cs" />
      <Compile Include="Assets\c_sharp.cs" />
      <Compile Include="Assets\c_sharp2.cs" />
      <Compile Include="Assets\c_sharp3.cs" />
