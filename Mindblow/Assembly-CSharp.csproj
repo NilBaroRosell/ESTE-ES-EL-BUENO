@@ -49,6 +49,7 @@
      <Compile Include="Assets\Coque_bola.cs" />
      <Compile Include="Assets\Curs_Navet_paso.cs" />
      <Compile Include="Assets\Cus_Move.cs" />
+     <Compile Include="Assets\DeathMenu.cs" />
      <Compile Include="Assets\Enemy.cs" />
      <Compile Include="Assets\Enemy_Boss.cs" />
      <Compile Include="Assets\Enemy_Boss_2.cs" />
@@ -69,7 +70,6 @@
      <Compile Include="Assets\Laser.cs" />
      <Compile Include="Assets\MOVIMIENTO.cs" />
      <Compile Include="Assets\MenuManager.cs" />
-     <Compile Include="Assets\MenuYHUD.cs" />
      <Compile Include="Assets\Morter_Shoot_1.cs" />
      <Compile Include="Assets\Morter_Shoot_2.cs" />
      <Compile Include="Assets\Morter_Shoot_3.cs" />
@@ -85,6 +85,7 @@
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\NewBehaviourScript1.cs" />
      <Compile Include="Assets\No_ExploForce.cs" />
+     <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\PlayerManager.cs" />
      <Compile Include="Assets\PositionPlayer.cs" />
      <Compile Include="Assets\Position_Enemy.cs" />
@@ -93,6 +94,7 @@
      <Compile Include="Assets\Rotacion_compas.cs" />
      <Compile Include="Assets\Rotacion_portal.cs" />
      <Compile Include="Assets\Teledirigido.cs" />
+     <Compile Include="Assets\VictoryMenu.cs" />
      <Compile Include="Assets\c_sharp.cs" />
      <Compile Include="Assets\c_sharp2.cs" />
      <Compile Include="Assets\c_sharp3.cs" />
@@ -107,7 +109,6 @@
      <Compile Include="Assets\scripts\prova3.cs" />
      <Compile Include="Assets\scripts\seguimientoCamara.cs" />
      <Compile Include="Assets\trampilla.cs" />
-     <None Include="Assets\EstoNoHaceNadaPeroEsImportante.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
