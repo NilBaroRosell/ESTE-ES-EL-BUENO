@@ -4,7 +4,7 @@ public class MenuManager : MonoBehaviour
 {
     public void GameStart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("historia");
     }
 
     public void QuitMenu()
