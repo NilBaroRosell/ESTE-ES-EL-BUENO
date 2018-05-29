@@ -150,6 +150,7 @@ TagManager:
   - Boton
   - Enemy Ball 8
   - Enemy Ball 9
+  - Lava
   layers:
   - Default
   - TransparentFX

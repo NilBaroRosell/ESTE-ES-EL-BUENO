@@ -18,6 +18,7 @@ public class Laser : MonoBehaviour
     public AudioClip sonidoLase;
     public AudioSource fuenteDeAudioLaser;
 
+    private bool reproduint = false;
 
     // Use this for initialization
     void Start()
@@ -32,11 +33,17 @@ public class Laser : MonoBehaviour
         if (tiempo >= tiempoRecarga && tiempo <= tiempoCiclo)
         {
             transformLaser.localPosition = new Vector2(posX, posY);
-            fuenteDeAudioLaser.clip = sonidoLase;
-            fuenteDeAudioLaser.Play();
+            if (!reproduint)
+            {
+                fuenteDeAudioLaser.clip = sonidoLase;
+                fuenteDeAudioLaser.Play();
+                reproduint = true;
+            }
+            //Debug.Log("entra");
         }
         else
         {
+            reproduint = false;
             transformLaser.localPosition = new Vector2(600, 600);
             if (tiempo > tiempoCiclo)
             {

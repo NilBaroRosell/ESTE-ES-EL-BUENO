@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenes/prova.unity
     guid: 04538d35050c7a942a0a7e2f533b4e13
+  - enabled: 1
+    path: Assets/escenes/victory.unity
+    guid: 1890681830c708e4283fb8c0190e4c9d
   - enabled: 0
     path: 
     guid: c42af78c0bba93348933e677afb0ceb2

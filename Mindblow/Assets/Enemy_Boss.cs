@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Enemy_Boss : MonoBehaviour {
@@ -59,7 +60,7 @@ public class Enemy_Boss : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player_Bullet" || col.gameObject.tag == "Player_Sword")
         {
-            if (health > 1)
+            if (health >= 1)
             {
                 fuenteDeAudioEnemigoTocado.clip = sonidoEnemigoTocadp;
                 fuenteDeAudioEnemigoTocado.Play();
@@ -71,7 +72,8 @@ public class Enemy_Boss : MonoBehaviour {
             }
             else
             {
-                Enemigo.transform.localPosition = new Vector2(-877, -5);
+                Destroy(gameObject);
+                SceneManager.LoadSceneAsync("victory");
             }
         }
 

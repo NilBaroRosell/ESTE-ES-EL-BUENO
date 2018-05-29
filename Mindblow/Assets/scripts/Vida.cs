@@ -11,6 +11,11 @@ public class Vida : MonoBehaviour {
     public Image vida;
     public float numVida;
 
+    public Image energia1;
+    public Image energia2;
+    public Image energia3;
+    public int numEnergia;
+
     private inicialitzar getCambio;
     private bool change;
 
@@ -33,14 +38,37 @@ public class Vida : MonoBehaviour {
 
         getDamage = Player.GetComponent<PlayerManager>();
         numVida = getDamage.Vida;
-        vida.fillAmount = numVida / 100;
-    }
+        numEnergia = getDamage.energia;
 
-    //private void FixedUpdate()
-    //{
-    //    PlayerManager getDamage = GetComponent<PlayerManager>();
-    //    numVida = getDamage.Vida;
-    //    vida.fillAmount = numVida / 100;
-    //    print(numVida);
-    //}
+        vida.fillAmount = numVida / 100;
+
+        switch(numEnergia)
+        {
+            case 0:
+                {
+                    // ha mort
+                    energia1.fillAmount = 0;
+                    energia2.fillAmount = 0;
+                    energia3.fillAmount = 0;
+                    break;
+                }
+            case 1:
+                {
+                    // ha perdut dos d'energia
+                    energia1.fillAmount = 0;
+                    energia2.fillAmount = 0;
+                    break;
+                }
+            case 2:
+                {
+                    // ha perdut un d'energia
+                    energia1.fillAmount = 0;
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
+    }
 }

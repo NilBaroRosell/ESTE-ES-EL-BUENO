@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour {
 	public Transform NAVE;
 
     public float Vida;
-    public float energia;
+    public int energia;
 
     private inicialitzar getCambio;
     public GameObject Player;
@@ -141,6 +141,14 @@ public class PlayerManager : MonoBehaviour {
             }
         }
 
+        if (col.gameObject.tag == "Lava")
+        {
+            player.velocity = new Vector2(-25, 25);
+            Vida -= 2;
+            fuenteDeAudioAu.clip = sonidoAu;
+            fuenteDeAudioAu.Play();
+        }
+
         if (col.gameObject.tag == "Obstaculos") //|| col.tag == "OtroEnemigo")
         {
             player.velocity = new Vector2(-25, 25);
@@ -155,6 +163,5 @@ public class PlayerManager : MonoBehaviour {
         {
             SceneManager.LoadScene(1);
         }
-
     }
 }

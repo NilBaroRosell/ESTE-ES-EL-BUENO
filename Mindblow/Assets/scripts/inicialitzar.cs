@@ -222,7 +222,7 @@ public class inicialitzar : MonoBehaviour {
                     }
                 case 9:
                     {
-                        jugador.transform.localPosition = new Vector3(468, -64, jugador.transform.localPosition.z);
+                        jugador.transform.localPosition = new Vector3((float) 437.5, -85, jugador.transform.localPosition.z);
 
                         cambio = true;
 
