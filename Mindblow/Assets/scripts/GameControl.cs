@@ -11,7 +11,6 @@ public class GameControl : MonoBehaviour
     public GameObject Enemigo;
     public GameObject Enemigo2;
     public Renderer apagon;
-    private PlayerManager getDamage;
 
     public bool llave = false, llaveEspecial1 = false, llaveEspecial2 = false, habitacio1 = false, luz = false;
     public int checkPoint = 0;
@@ -48,6 +47,7 @@ public class GameControl : MonoBehaviour
     public bool bossDead = false;
     public bool boss2Dead = false;
     public bool activarSeguimiento = false;
+    public bool p3 = false;
 
     private void Awake()
     {
@@ -205,6 +205,7 @@ public class GameControl : MonoBehaviour
             lastPosX = getVariables.transformJugador.localPosition.x;
             lastPosY = getVariables.transformJugador.localPosition.y;
             transformJugador.localPosition = new Vector2(xProva4, yProva4); // anar a habitacio 4
+            p3 = true;
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }
@@ -256,6 +257,7 @@ public class GameControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && (transformJugador.localPosition.x >= xPos17 && transformJugador.localPosition.x <= xPos18) && (transformJugador.localPosition.y >= yPos17 && transformJugador.localPosition.y <= yPos18))
         {
             transformJugador.localPosition = new Vector2(lastPosX, lastPosY + 5); // tornar al 2
+            p3 = false;
             fuenteDeAudioPuerta.clip = sonidoPuerta;
             fuenteDeAudioPuerta.Play();
         }

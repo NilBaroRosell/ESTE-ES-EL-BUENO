@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class inicialitzar : MonoBehaviour {
 
@@ -45,7 +46,11 @@ public class inicialitzar : MonoBehaviour {
     private PlayerManager getDamagePM;
     public GameObject Player;
     private GameControl getDamageGC;
+    public Image corazon1;
+    public Image corazon2;
+    public Image corazon3;
     private float nVida;
+    private int nEnergia;
     private int checkPoints;
     public bool cambio = false;
 
@@ -145,15 +150,22 @@ public class inicialitzar : MonoBehaviour {
 	void Update () {
         getDamagePM = Player.GetComponent<PlayerManager>();
         nVida = getDamagePM.Vida;
+        getDamagePM = Player.GetComponent<PlayerManager>();
+        nEnergia = getDamagePM.energia;
         getDamageGC = Player.GetComponent<GameControl>();
         checkPoints = getDamageGC.checkPoint;
+
+        nEnergia++;
+        
         if (nVida < 1)
         {
             switch (checkPoints)
             {
                 case 0:
                     {
-                        SceneManager.LoadScene(sceneBuildIndex: 1);
+                        jugador.transform.localPosition = new Vector3(-36, 2, jugador.transform.localPosition.z);
+
+                        cambio = true;
                         break;
                     }
                 case 1:
@@ -236,5 +248,22 @@ public class inicialitzar : MonoBehaviour {
         }
 
         else cambio = false;
+
+        if (nEnergia == 3)
+        {
+            Destroy(corazon1);
+        }
+        else if (nEnergia == 2)
+        {
+            Destroy(corazon2);
+        }
+        else if (nEnergia == 1)
+        {
+            Destroy(corazon3);
+        }
+        else if (nEnergia == 0)
+        {
+            SceneManager.LoadSceneAsync("Game Over");
+        }
     }
 }

@@ -6,6 +6,7 @@ public class seguimientoCamara : MonoBehaviour {
 
     public Vector2 focusAreaSize;
     public GameObject player;
+    private GameControl getProva3;
 
     private inicialitzar getCambio;
     public bool change = false;
@@ -16,6 +17,10 @@ public class seguimientoCamara : MonoBehaviour {
 
     int x = 0;
     float l = 0, r = 0, u = 0, d = 0;
+
+    private bool prova3;
+    public bool zoomOut = false;
+    public bool lastOut = false;
 
 
     struct focusArea
@@ -83,6 +88,7 @@ public class seguimientoCamara : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
+
         playerCenterX = player.transform.localPosition.x;
         playerCenterY = player.transform.localPosition.y;
 
@@ -94,5 +100,30 @@ public class seguimientoCamara : MonoBehaviour {
         FocusArea = new focusArea(playerCenterX, playerCenterY, x, l, r, d, u, focusAreaSize);
 
         transform.localPosition = new Vector3(transform.localPosition.x + FocusArea.velocity.x, transform.localPosition.y + FocusArea.velocity.y, transform.localPosition.z);
+
+        getProva3 = player.GetComponent<GameControl>();
+        prova3 = getProva3.p3;
+
+        //if (prova3)
+        //{
+            if (lastOut != zoomOut) lastOut = zoomOut;
+
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                if (zoomOut)
+                {
+                    zoomOut = false;
+                    lastOut = true;
+                }
+                else
+                {
+                    zoomOut = true;
+                    lastOut = false;
+                }
+
+                if (zoomOut && !lastOut) Camera.main.fieldOfView += 8;
+                else if (!zoomOut && lastOut) Camera.main.fieldOfView -= 8;
+            }
+        //}
     }
 }

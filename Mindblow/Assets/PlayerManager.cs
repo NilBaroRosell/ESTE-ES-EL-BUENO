@@ -19,6 +19,8 @@ public class PlayerManager : MonoBehaviour {
     public AudioClip sonidoAu;
     public AudioSource fuenteDeAudioAu;
 
+    bool dead = false;
+
     // Use this for initialization
     void Start () {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -29,13 +31,20 @@ public class PlayerManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Vida < 1) energia--;
-        if (energia == 0)
-
         getCambio = Player.GetComponent<inicialitzar>();
         change = getCambio.cambio;
 
-        if (change) Vida = 100;
+        if (Vida < 1 && !dead)
+        {
+            energia--;
+            dead = true;
+        }
+
+        if (change)
+        {
+            Vida = 100;
+            dead = false;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -159,9 +168,6 @@ public class PlayerManager : MonoBehaviour {
             player.velocity = new Vector2(0, 100);
         }
 
-        if (col.gameObject.tag == "Curs Navet")
-        {
-            SceneManager.LoadScene(1);
-        }
+        if (col.gameObject.tag == "Curs Navet") Vida = 0;
     }
 }

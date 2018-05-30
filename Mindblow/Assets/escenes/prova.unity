@@ -5399,7 +5399,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.550931, y: 5.5160675}
+  m_Offset: {x: -8.745026, y: 5.5160675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5410,7 +5410,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.101862, y: 12.032135}
+  m_Size: {x: 18.490051, y: 12.032135}
   m_EdgeRadius: 0
 --- !u!212 &164433630
 SpriteRenderer:
@@ -5462,7 +5462,7 @@ Transform:
   m_PrefabInternal: {fileID: 1509485276}
   m_GameObject: {fileID: 164433628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.96, y: -81.27, z: 0}
+  m_LocalPosition: {x: 100.3, y: -81.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5919,13 +5919,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 007624d4be639c94ba2d5069b53b7f19, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
 --- !u!222 &173257675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7400,13 +7400,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 007624d4be639c94ba2d5069b53b7f19, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
 --- !u!222 &224872426
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15733,7 +15733,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538762597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 138, y: -52, z: 0}
+  m_LocalPosition: {x: -36, y: 2, z: 0}
   m_LocalScale: {x: 0.5335937, y: 0.56193954, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15946,11 +15946,11 @@ MonoBehaviour:
   yPos24: -18.3
   x1PL1: 11
   y1PL1: -3.67
-  x2PL1: 11.5
+  x2PL1: 11.75
   y2PL1: -1
   x1PL2: 15
   y1PL2: -24.9
-  x2PL2: 15.5
+  x2PL2: 15.65
   y2PL2: -22.2
   x1PL3: 233
   y1PL3: -7
@@ -15958,17 +15958,17 @@ MonoBehaviour:
   y2PL3: 11.42
   x1PL4: 180.65
   y1PL4: -7.1
-  x2PL4: 180.85
+  x2PL4: 181.1
   y2PL4: -4.3
-  x1PL5: 459.1
+  x1PL5: 458.8
   y1PL5: -37.5
   x2PL5: 459.25
   y2PL5: -35.3
   x1PL6: 479.15
   y1PL6: -55.9
-  x2PL6: 479.3
+  x2PL6: 479.7
   y2PL6: -52.8
-  x1PL7: 470.3
+  x1PL7: 470
   y1PL7: -68.15
   x2PL7: 470.45
   y2PL7: -65.7
@@ -15999,6 +15999,7 @@ MonoBehaviour:
   bossDead: 0
   boss2Dead: 0
   activarSeguimiento: 0
+  p3: 0
 --- !u!114 &538762606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16130,6 +16131,9 @@ MonoBehaviour:
   enemigo35: {fileID: 1260563136}
   camara: {fileID: 0}
   Player: {fileID: 538762597}
+  corazon1: {fileID: 224872425}
+  corazon2: {fileID: 691538043}
+  corazon3: {fileID: 173257674}
   cambio: 0
 --- !u!82 &538762608
 AudioSource:
@@ -20055,7 +20059,7 @@ GameObject:
   - component: {fileID: 635990036}
   - component: {fileID: 635990040}
   m_Layer: 0
-  m_Name: Obstaculo pv2 2 (3)
+  m_Name: Obstaculo pv2 2
   m_TagString: SUELO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20179,7 +20183,7 @@ MonoBehaviour:
   sentido1: 1
   minX: 194.25
   maxX: 194.25
-  minY: -95.5
+  minY: -96
   maxY: -80
   velocidad: 0.1
   Player: {fileID: 0}
@@ -22155,13 +22159,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 007624d4be639c94ba2d5069b53b7f19, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
 --- !u!222 &691538044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39225,8 +39229,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 57
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -39270,6 +39274,8 @@ MonoBehaviour:
   focusAreaSize: {x: 1, y: 6}
   player: {fileID: 538762597}
   change: 0
+  zoomOut: 0
+  lastOut: 0
 --- !u!1001 &1198360081
 Prefab:
   m_ObjectHideFlags: 0
@@ -48299,11 +48305,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4822048533543878, guid: 004a7f9626048774c84f238fb1b25ff4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 93.96
+      value: 100.3
       objectReference: {fileID: 0}
     - target: {fileID: 4822048533543878, guid: 004a7f9626048774c84f238fb1b25ff4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -81.27
+      value: -81.6
       objectReference: {fileID: 0}
     - target: {fileID: 4822048533543878, guid: 004a7f9626048774c84f238fb1b25ff4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -48332,6 +48338,16 @@ Prefab:
     - target: {fileID: 1411769520006362, guid: 004a7f9626048774c84f238fb1b25ff4, type: 2}
       propertyPath: m_Name
       value: Limite derecha prova 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61471024224746776, guid: 004a7f9626048774c84f238fb1b25ff4,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -8.745026
+      objectReference: {fileID: 0}
+    - target: {fileID: 61471024224746776, guid: 004a7f9626048774c84f238fb1b25ff4,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 18.490051
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 004a7f9626048774c84f238fb1b25ff4, type: 2}

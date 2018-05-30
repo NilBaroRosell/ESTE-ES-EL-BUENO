@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenes/victory.unity
     guid: 1890681830c708e4283fb8c0190e4c9d
+  - enabled: 1
+    path: Assets/Game Over.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: c42af78c0bba93348933e677afb0ceb2

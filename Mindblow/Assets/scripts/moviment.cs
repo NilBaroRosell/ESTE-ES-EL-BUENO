@@ -64,7 +64,7 @@ public class moviment : MonoBehaviour
 
         if (espacio && (tocandoElSuelo || tocandoEscalera)) // saltar
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1800));
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1900));
             fuenteDeAudioSalto.clip = sonidoSalto;
             fuenteDeAudioSalto.Play();
             espacio = false;

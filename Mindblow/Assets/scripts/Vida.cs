@@ -41,34 +41,5 @@ public class Vida : MonoBehaviour {
         numEnergia = getDamage.energia;
 
         vida.fillAmount = numVida / 100;
-
-        switch(numEnergia)
-        {
-            case 0:
-                {
-                    // ha mort
-                    energia1.fillAmount = 0;
-                    energia2.fillAmount = 0;
-                    energia3.fillAmount = 0;
-                    break;
-                }
-            case 1:
-                {
-                    // ha perdut dos d'energia
-                    energia1.fillAmount = 0;
-                    energia2.fillAmount = 0;
-                    break;
-                }
-            case 2:
-                {
-                    // ha perdut un d'energia
-                    energia1.fillAmount = 0;
-                    break;
-                }
-            default:
-                {
-                    break;
-                }
-        }
     }
 }
