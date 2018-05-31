@@ -12,4 +12,14 @@ public class MenuManager : MonoBehaviour
         Debug.Log("GAME QUITTED SUCCESSFULLY");
         Application.Quit();
     }
+
+    public void SettingsMenu()
+    {
+        SceneManager.LoadScene("StartSettings");
+    }
+
+    public void ControlsMenu()
+    {
+        SceneManager.LoadScene("Controls");
+    }
 }

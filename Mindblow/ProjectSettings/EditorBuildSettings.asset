@@ -19,10 +19,16 @@ EditorBuildSettings:
     guid: 1890681830c708e4283fb8c0190e4c9d
   - enabled: 1
     path: Assets/Game Over.unity
-    guid: 00000000000000000000000000000000
+    guid: e5b9dc3ed91924a48a3bbbb0b6378293
   - enabled: 0
     path: 
     guid: c42af78c0bba93348933e677afb0ceb2
   - enabled: 0
     path: Assets/prova.unity
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/StartSettings.unity
+    guid: 51f6f02e9e624a0418d02d9329eca323
+  - enabled: 1
+    path: Assets/Controls.unity
+    guid: b1b62962c2287e94f9607362bd2f9532

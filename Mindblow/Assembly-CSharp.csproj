@@ -102,8 +102,9 @@
      <Compile Include="Assets\c_sharp.cs" />
      <Compile Include="Assets\c_sharp2.cs" />
      <Compile Include="Assets\c_sharp3.cs" />
+     <Compile Include="Assets\controlsMainMenu.cs" />
      <Compile Include="Assets\scripts\GameControl.cs" />
-     <Compile Include="Assets\scripts\Goma_Lanzamiento.cs" />
+     <Compile Include="Assets\scripts\Plataformes.cs" />
      <Compile Include="Assets\scripts\Vida.cs" />
      <Compile Include="Assets\scripts\aaa.cs" />
      <Compile Include="Assets\scripts\inicialitzar.cs" />
