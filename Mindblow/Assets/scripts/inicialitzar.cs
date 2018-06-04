@@ -184,7 +184,7 @@ public class inicialitzar : MonoBehaviour {
                     }
                 case 3:
                     {
-                        jugador.transform.localPosition = new Vector3((float)162.24, -4, jugador.transform.localPosition.z);
+                        jugador.transform.localPosition = new Vector3((float)162.24, 14, jugador.transform.localPosition.z);
 
                         cambio = true;
 
@@ -208,7 +208,7 @@ public class inicialitzar : MonoBehaviour {
                     }
                 case 6:
                     {
-                        jugador.transform.localPosition = new Vector3((float)405.3, -8, jugador.transform.localPosition.z);
+                        jugador.transform.localPosition = new Vector3((float)408, -9, jugador.transform.localPosition.z);
 
                         cambio = true;
 
