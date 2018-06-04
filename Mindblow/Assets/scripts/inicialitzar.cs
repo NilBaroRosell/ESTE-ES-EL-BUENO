@@ -154,8 +154,6 @@ public class inicialitzar : MonoBehaviour {
         nEnergia = getDamagePM.energia;
         getDamageGC = Player.GetComponent<GameControl>();
         checkPoints = getDamageGC.checkPoint;
-
-        nEnergia++;
         
         if (nVida < 1)
         {
@@ -249,20 +247,18 @@ public class inicialitzar : MonoBehaviour {
 
         else cambio = false;
 
-        if (nEnergia == 3)
+        if (nEnergia == 2)
         {
             Destroy(corazon1);
         }
-        else if (nEnergia == 2)
-        {
-            Destroy(corazon2);
-        }
         else if (nEnergia == 1)
         {
-            Destroy(corazon3);
+            Destroy(corazon2);
+
         }
         else if (nEnergia == 0)
         {
+            Destroy(corazon3);
             SceneManager.LoadSceneAsync("Game Over");
         }
     }

@@ -701,9 +701,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "\"Pfff... Me s\xE9 de memoria todo lo que est\xE1 explicando el profe.
     Creo que voy a echar una cabezadita mientras pienso en las asignaturas de hoy...\"\n\n\n\nControles:
-    A y D para moverse lateralmente. SPACE para saltar. El bot\xF3n izquierdo del
-    rat\xF3n para disparar y el derecho para atacar cuerpo a cuerpo. Para pausar el
-    juego, apreta ESC."
+    A y D para moverse lateralmente. Z para hacer zoom out / zoom in. SPACE para saltar.
+    El bot\xF3n izquierdo del rat\xF3n para disparar y el derecho para atacar cuerpo
+    a cuerpo. Para pausar el juego, apreta ESC."
 --- !u!222 &1214374607
 CanvasRenderer:
   m_ObjectHideFlags: 0
