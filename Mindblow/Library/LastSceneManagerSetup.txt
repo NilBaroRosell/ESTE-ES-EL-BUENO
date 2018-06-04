@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/escenes/prova.unity
+- path: Assets/Game Over.unity
   isLoaded: 1
   isActive: 1
