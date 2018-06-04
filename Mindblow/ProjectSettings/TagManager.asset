@@ -151,6 +151,8 @@ TagManager:
   - Enemy Ball 8
   - Enemy Ball 9
   - Lava
+  - Compas 9
+  - Compas 10
   layers:
   - Default
   - TransparentFX

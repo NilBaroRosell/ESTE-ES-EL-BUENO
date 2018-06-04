@@ -104,6 +104,17 @@ public class PlayerManager : MonoBehaviour {
             col.gameObject.tag == "Enemigo 15" ||
 
             col.gameObject.tag == "Compas" ||
+            col.gameObject.tag == "Compas 1" ||
+            col.gameObject.tag == "Compas 2" ||
+            col.gameObject.tag == "Compas 3" ||
+            col.gameObject.tag == "Compas 4" ||
+            col.gameObject.tag == "Compas 5" ||
+            col.gameObject.tag == "Compas 6" ||
+            col.gameObject.tag == "Compas 7" ||
+            col.gameObject.tag == "Compas 8" ||
+            col.gameObject.tag == "Compas 9" ||
+            col.gameObject.tag == "Compas 10" ||
+
             col.gameObject.tag == "Dibujante 1" ||
             col.gameObject.tag == "Dibujante 2" ||
             col.gameObject.tag == "Dibujante 3" ||
