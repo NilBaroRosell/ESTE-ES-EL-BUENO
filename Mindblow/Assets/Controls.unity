@@ -713,7 +713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "A y E para moverse lateralmente.\nSPACE para saltar.\nRAT\xD3N IZQUIERDO
+  m_Text: "A y D para moverse lateralmente.\nSPACE para saltar.\nRAT\xD3N IZQUIERDO
     para disparar.\nRAT\xD3N DERECHO para ataque cuerpo a cuerpo.\nE para interactuar
     con puertas, palancas..."
 --- !u!222 &1953999969
