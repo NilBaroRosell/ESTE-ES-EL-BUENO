@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/StartSettings.unity
+- path: Assets/escenes/prova.unity
   isLoaded: 1
   isActive: 1
