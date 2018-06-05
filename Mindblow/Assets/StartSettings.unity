@@ -432,7 +432,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1652959828}
-        m_MethodName: setFullscreen
+        m_MethodName: SetFullscreen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1171,7 +1171,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1652959828}
-        m_MethodName: setGraphics
+        m_MethodName: SetGraphics
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1250,8 +1250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 122.75, y: 111}
-  m_SizeDelta: {x: -568.51, y: -341}
+  m_AnchoredPosition: {x: 122.75, y: 110.99998}
+  m_SizeDelta: {x: -569, y: -362}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &984848866
 MonoBehaviour:
@@ -1300,8 +1300,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1652959828}
-        m_MethodName: setVolume
-        m_Mode: 4
+        m_MethodName: SetVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
